@@ -1,8 +1,19 @@
 page-home {
 
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+
     ion-content {
       font-family: 'Catamaran', sans-serif;
       color: #9c9c9c !important;
+    }
+
+    h1 {
+      font-size: 160%;
+      margin-top: 0px;
     }
 
     ion-grid {
@@ -10,17 +21,28 @@ page-home {
     }
 
     ion-row {
-      height: 20%;
       text-align: center;
     }
 
     #hometop {
-      height: 40%;
+      height: 40vh;
     }
 
     img {
-      width: 100%;
-      height: auto;
+      height: 15vw;
+      max-height: 90px;
+      object-fit: contain;
+      overflow: hidden;
+
+
+    }
+
+    #logo {
+      max-height: 140px;
+    }
+
+    ion-col {
+      padding: 3px;
     }
 
     .vertical-align-content > *
@@ -28,6 +50,16 @@ page-home {
      display: flex!important;
      align-content: center!important;
      align-items: center!important;
+}
+
+.align-bottom {
+  align-items: flex-end!important;
+  align-content: flex-end!important;
+}
+
+.themeoptions {
+  width: 100%;
+  height: 100%;
 }
 
 
