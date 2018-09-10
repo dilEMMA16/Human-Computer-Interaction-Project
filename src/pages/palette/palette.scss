@@ -1,9 +1,4 @@
-page-home {
-
-    ion-content {
-      font-family: 'Catamaran', sans-serif;
-      color: #9c9c9c !important;
-    }
+page-palette {
 
     ion-grid {
       height: 100%;
@@ -14,14 +9,7 @@ page-home {
       text-align: center;
     }
 
-    #hometop {
-      height: 40%;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-    }
+    
 
     .vertical-align-content > *
 {
