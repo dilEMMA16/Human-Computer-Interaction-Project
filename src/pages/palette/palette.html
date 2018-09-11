@@ -11,16 +11,17 @@
   <ion-grid class="vertical-align-content">
     <ion-row>
       <ion-col col-12>
-        <div class="tear" id="color1"></div>
-        <div class="tear" id="color2"></div>
-        <div class="tear" id="color3"></div>
-        <div class="tear" id="color4"></div>
+        <div class="circle" style="padding-top:11px !important;"><img id=chosenTheme [src]= "theme"></div>
+        <div class="circle" style="background-color:#9c9c9c; color:white;">palette</div>
+        <div class="circle">fonts</div>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col col-4>icon</ion-col>
-      <ion-col col-4>icon</ion-col>
-      <ion-col col-4>icon</ion-col>
+    <ion-row >
+      <div *ngFor="let color of p1" style="width:25%;">
+          <ion-col col-3>
+            <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
+          </ion-col>
+      </div>
     </ion-row>
     <ion-row>
       <ion-col col-4>icon</ion-col>
