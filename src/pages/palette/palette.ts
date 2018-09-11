@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 import { IonicPage } from 'ionic-angular';
+import { HomePage} from "../home/home";
 
 @Component({
   selector: 'page-palette',
@@ -23,6 +24,11 @@ export class PalettePage {
     this.p2 = navParams.get('palette2');
     this.p3 = navParams.get('palette3');
     this.p4 = navParams.get('palette4');
+  }
+
+
+  navigateToHomePage() {
+      this.navCtrl.pop();
   }
 
 

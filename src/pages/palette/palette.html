@@ -1,37 +1,50 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
 
   <ion-grid class="vertical-align-content">
     <ion-row>
-      <ion-col col-12>
-        <div class="circle" style="padding-top:11px !important;"><img id=chosenTheme [src]= "theme"></div>
-        <div class="circle" style="background-color:#9c9c9c; color:white;">palette</div>
+      <ion-col col-3></ion-col>
+      <ion-col col-2>
+        <div class="circle" (click)="navigateToHomePage()" style="padding-top:11px !important;"><img  id=chosenTheme [src]= "theme"></div>
+      </ion-col>
+      <ion-col col-2>
+        <div class="circle" style="background-color:#9c9c9c; color:white;">colors</div>
+      </ion-col>
+      <ion-col col-2>
         <div class="circle">fonts</div>
       </ion-col>
+      <ion-col col-3></ion-col>
     </ion-row>
     <ion-row >
-      <div *ngFor="let color of p1" style="width:25%;">
+      <div *ngFor="let color of p1" style="width:25%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+          <ion-col col-3>
+            <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
+          </ion-col>
+      </div>
+    </ion-row>
+    <ion-row style="">
+      <div *ngFor="let color of p2" style="width:25%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+          <ion-col col-3  style="">
+            <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
+          </ion-col>
+      </div>
+    </ion-row>
+    <ion-row>
+      <div *ngFor="let color of p3" style="width:25%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
           <ion-col col-3>
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
           </ion-col>
       </div>
     </ion-row>
     <ion-row>
-      <ion-col col-4>icon</ion-col>
-      <ion-col col-4>icon</ion-col>
-      <ion-col col-4>icon</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-4>icon</ion-col>
-      <ion-col col-4>icon</ion-col>
-      <ion-col col-4>icon</ion-col>
+      <div *ngFor="let color of p4" style="width:25%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+          <ion-col col-3>
+            <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
+          </ion-col>
+      </div>
     </ion-row>
   </ion-grid>
 
