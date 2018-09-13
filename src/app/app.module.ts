@@ -7,12 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PalettePage } from '../pages/palette/palette';
+import { CustomPalettePage } from '../pages/custompalette/custompalette';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    PalettePage
+    PalettePage,
+    CustomPalettePage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { PalettePage } from '../pages/palette/palette';
   entryComponents: [
     MyApp,
     HomePage,
-    PalettePage
+    PalettePage,
+    CustomPalettePage
   ],
   providers: [
     StatusBar,
