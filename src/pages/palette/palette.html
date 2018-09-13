@@ -5,7 +5,8 @@
 <ion-content padding>
 
   <ion-grid class="vertical-align-content">
-    <ion-row>
+    <ion-row style="position:relative;">
+
       <ion-col col-3></ion-col>
       <ion-col col-2>
         <div class="circle" (click)="navigateToHomePage()" style="padding-top:11px !important;"><img  id=chosenTheme [src]= "theme"></div>
@@ -17,31 +18,36 @@
         <div class="circle">fonts</div>
       </ion-col>
       <ion-col col-3></ion-col>
+      <div  style="width:100%; height:10vw; text-align:center; padding-top: 20px; font-size:140%">choose a palette</div>
     </ion-row>
     <ion-row >
-      <div *ngFor="let color of p1" style="width:25%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
-          <ion-col col-3>
+      <ion-col class = "col col-16">palette #1 </ion-col>
+      <div *ngFor="let color of p1" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+          <ion-col class="col">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
           </ion-col>
       </div>
     </ion-row>
     <ion-row style="">
-      <div *ngFor="let color of p2" style="width:25%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
-          <ion-col col-3  style="">
+      <ion-col class = "col col-16">palette #2 </ion-col>
+      <div *ngFor="let color of p2" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+          <ion-col class="col" style="">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
           </ion-col>
       </div>
     </ion-row>
     <ion-row>
-      <div *ngFor="let color of p3" style="width:25%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
-          <ion-col col-3>
+      <ion-col class = "col col-16">palette #3 </ion-col>
+      <div *ngFor="let color of p3" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+          <ion-col class="col">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
           </ion-col>
       </div>
     </ion-row>
     <ion-row>
-      <div *ngFor="let color of p4" style="width:25%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
-          <ion-col col-3>
+      <ion-col class = "col col-16">palette #4 </ion-col>
+      <div *ngFor="let color of p4" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+          <ion-col class="col">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
           </ion-col>
       </div>
