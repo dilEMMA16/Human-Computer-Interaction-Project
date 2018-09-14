@@ -54,12 +54,12 @@
     <ion-row class="align-bottom" style="margin-bottom:5px;">
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/rustic.png')"><img src="assets/imgs/rustic.png"></ion-col>
       <ion-col col-4 ><img  src="assets/imgs/random.png"></ion-col>
-      <ion-col col-4 ><img  src="assets/imgs/custom.png"></ion-col>
+      <ion-col col-4 (click) = "customThemeChosen()"><img  src="assets/imgs/custom.png"></ion-col>
     </ion-row>
     <ion-row style="height:5vh; margin-bottom:15px;">
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/rustic.png')">rustic<br><br></ion-col>
       <ion-col col-4>random<br><br></ion-col>
-      <ion-col col-4 >custom<br><br></ion-col>
+      <ion-col col-4 (click) = "customThemeChosen()">custom<br><br></ion-col>
     </ion-row>
   </ion-grid>
 

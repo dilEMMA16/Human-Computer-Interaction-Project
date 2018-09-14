@@ -1,0 +1,102 @@
+page-custompalette {
+
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.circle {
+  position: relative;
+  display: inline-block;
+  //width: 100%;
+//  height: 0;
+  width: 55px; //were 75 with 26 padding font-size 140%
+  height: 55px;
+  //margin: 2vw 5vw;
+  padding: 20px 0;
+  border-radius: 50%;
+  border: 1px solid #9c9c9c;
+  //background: #38a9e4;
+  color: #9c9c9c;
+  font-family: 'Josefin Slab', serif;
+  font-size:100%;
+  text-align: center;
+}
+
+    ion-content {
+      font-family: 'Josefin Slab', serif;
+      color: #9c9c9c !important;
+    }
+
+    h1 {
+      font-size: 160%;
+      margin-top: 0px;
+    }
+
+    ion-grid {
+      //height: 100%;
+    }
+
+    .active {
+      transform: rotate(45deg) !important;
+    }
+
+    ion-row {
+      text-align: center;
+    }
+
+    #chosenTheme {
+      //display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
+
+
+    .tear {
+      display: inline-block;
+      transform: rotate(-45deg);
+      background-color: green;
+      width: 50px;
+      height: 50px;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      color: white;
+      text-align: center;
+    }
+
+    .tear2 {
+      display: inline-block;
+      transform: rotate(135deg);
+      background-color: green;
+      width: 20px;
+      margin: 30px;
+      height: 20px;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      color: white;
+      text-align: center;
+    }
+
+
+    ion-col {
+      padding: 3px;
+    }
+
+    .vertical-align-content > *
+{
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+}
+
+.align-bottom {
+  align-items: flex-end!important;
+  align-content: flex-end!important;
+}
+
+
+
+
+}
