@@ -58,14 +58,18 @@ export class CustomPalettePage {
       //make splat not display and drop show
       let idOfSplat = colorcode + "splat";
       document.getElementById(idOfSplat).style.display = "none";
-      document.getElementById(colorcode).style.display = "inline-block";
+      document.getElementById(colorcode).style.display = "inline-flex";
 
       //reorder selected colors
       let number = 1;
       for (let choice of this.chosenColors) {
-        let tear = choice + "splat";
-       var content = document.getElementById(tear);
-          content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:20px;margin-left:20px;margin-top:5px;margin-bottom:30px;background-color:"+choice+"'></div>';"
+        //let tear = choice + "splat";
+       var content = document.getElementById(idOfSplat);
+       //content.innerHTML  = number + "<div><span class='fa-stack fa-lg'><i class='fa fa-paw fa-stack-2x' style='transform:rotate(-96deg);color =" + choice + "!important'></i><i class='fa fa-paw fa-stack-2x'style='margin-top:8px;transform:rotate(186deg);color =" + choice + "!important'></i><i class='fa fa-paw fa-stack-2x' style='margin-top:5px;margin-left:9px;transform:rotate(56deg);color =" + choice + "!important'></i></span></div>"
+
+        //content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:20px;margin-left:20px;margin-top:5px;margin-bottom:30px;background-color:"+choice+"'></div>';"
+        //content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:auto; margin-left:auto;background-color:"+choice+"'></div>';"
+        content.innerHTML = "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:auto; margin-left:auto;background-color:"+choice+"'><p style='padding-bottom:25px;padding-left:45px;transform:rotate(225deg);color:#9c9c9c;'>" + number + "</p></div>';"
 
         number++;
       }
@@ -84,16 +88,19 @@ export class CustomPalettePage {
 
       //make splat display and drop hide
       let idOfSplat = colorcode + "splat";
-      document.getElementById(idOfSplat).style.display = "inline-block";
+      document.getElementById(idOfSplat).style.display = "inline-flex";
       document.getElementById(colorcode).style.display = "none";
 
       //reorder selected colors
       let number = 1;
       for (let choice of this.chosenColors) {
-        let tear = choice + "splat";
-       var content = document.getElementById(tear);
+        //let tear = choice + "splat";
+       var content = document.getElementById(idOfSplat);
+       //content.innerHTML  = number + "<div><span class='fa-stack fa-lg'><i class='fa fa-paw fa-stack-2x' style='transform:rotate(-96deg);color =" + choice + "!important'></i><i class='fa fa-paw fa-stack-2x'style='margin-top:8px;transform:rotate(186deg);color =" + choice + "!important'></i><i class='fa fa-paw fa-stack-2x' style='margin-top:5px;margin-left:9px;transform:rotate(56deg);color =" + choice + "!important'></i></span></div>"
+       //content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:20px;margin-left:20px;margin-top:5px;margin-bottom:30px;background-color:"+choice+"'></div>';"
+       //content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:auto; margin-left:auto;background-color:"+choice+"'></div>';"
+        content.innerHTML = "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:auto; margin-left:auto;background-color:"+choice+"'><p style='padding-bottom:25px;padding-left:45px;transform:rotate(225deg);color:#9c9c9c;'>" + number + "</p></div>';"
 
-       content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:20px;margin-left:20px;margin-top:5px;margin-bottom:30px;background-color:"+choice+"'></div>';"
         number++;
       }
 

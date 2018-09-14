@@ -1,5 +1,5 @@
 <ion-header>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </ion-header>
 
 <ion-content padding>
@@ -26,11 +26,9 @@
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
-        <div *ngFor="let color of reds" style="width:25%;float:left;" >
+        <div *ngFor="let color of reds" style="width:25%;float:left;height:90px;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
-              <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
-                </div>
+              <div class="" style="width: 25vw !important; height:50px !important; display:none;" (click)="selectColor(color)" id="{{color}}splat">
               </div>
         </div>
       </div>
