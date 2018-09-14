@@ -60,6 +60,16 @@ export class CustomPalettePage {
       document.getElementById(idOfSplat).style.display = "none";
       document.getElementById(colorcode).style.display = "inline-block";
 
+      //reorder selected colors
+      let number = 1;
+      for (let choice of this.chosenColors) {
+        let tear = choice + "splat";
+       var content = document.getElementById(tear);
+          content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:20px;margin-left:20px;margin-top:5px;margin-bottom:30px;background-color:"+choice+"'></div>';"
+
+        number++;
+      }
+
 
       //return
       return
@@ -76,6 +86,16 @@ export class CustomPalettePage {
       let idOfSplat = colorcode + "splat";
       document.getElementById(idOfSplat).style.display = "inline-block";
       document.getElementById(colorcode).style.display = "none";
+
+      //reorder selected colors
+      let number = 1;
+      for (let choice of this.chosenColors) {
+        let tear = choice + "splat";
+       var content = document.getElementById(tear);
+
+       content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:20px;margin-left:20px;margin-top:5px;margin-bottom:30px;background-color:"+choice+"'></div>';"
+        number++;
+      }
 
       //inner html add length of chosen colors array
 

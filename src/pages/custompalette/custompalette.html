@@ -29,7 +29,7 @@
         <div *ngFor="let color of reds" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
                 </div>
               </div>
         </div>
@@ -44,7 +44,7 @@
         <div *ngFor="let color of oranges" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color" id="{{color}}tear" style="margin:20px;margin-bottom:30px;" >
                 </div>
               </div>
         </div>
@@ -59,7 +59,7 @@
         <div *ngFor="let color of yellows" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color"[style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color" id="{{color}}tear" style="margin:20px;margin-bottom:30px;" >
                 </div>
               </div>
         </div>
@@ -74,7 +74,7 @@
         <div *ngFor="let color of greens" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color" id="{{color}}tear" style="margin:20px;margin-bottom:30px;" >
                 </div>
               </div>
         </div>
@@ -89,7 +89,7 @@
         <div *ngFor="let color of blues" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color" id="{{color}}tear" style="margin:20px;margin-bottom:30px;" >
                 </div>
               </div>
         </div>
@@ -104,7 +104,7 @@
         <div *ngFor="let color of purples" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color" id="{{color}}tear" style="margin:20px;margin-bottom:30px;" >
                 </div>
               </div>
         </div>
@@ -119,7 +119,7 @@
         <div *ngFor="let color of pinks" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)"  [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color" id="{{color}}tear" style="margin:20px;margin-bottom:30px;" >
                 </div>
               </div>
         </div>
@@ -134,7 +134,7 @@
         <div *ngFor="let color of grays" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color" id="{{color}}tear" style="margin:20px;margin-bottom:30px;" >
                 </div>
               </div>
         </div>
@@ -149,7 +149,7 @@
         <div *ngFor="let color of creams" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color"id="{{color}}tear" style="margin:20px;margin-bottom:30px;" >
                 </div>
               </div>
         </div>
@@ -163,7 +163,7 @@
         <div *ngFor="let color of browns" style="width:25%;float:left;" >
               <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:inline-block !important;margin:10px;"></div>
               <div class="" style="min-width: 25% !important; height:50px; display:none;" (click)="selectColor(color)" id="{{color}}splat">
-                <div class="tear2"  [style.background-color]="color" style="margin:20px;margin-bottom:30px;" >
+                <div class="tear2"  [style.background-color]="color" id="{{color}}tear"style="margin:20px;margin-bottom:30px;" >
                 </div>
               </div>
         </div>
