@@ -48,25 +48,36 @@ export class CustomPalettePage {
 
     let element: HTMLElement = document.getElementById(colorcode);
 
-    if (element.classList.contains("active")) { //if the color is currently selected
-      //remove active class
-      element.classList.remove("active");
+    if (element.classList.contains("selected")) { //if the color is currently selected
+      //remove classes
+      element.classList.remove("selected");
+
       //remove from chosenColors array
-      remove(this.chosenColors, colorcode);
+      this.remove(this.chosenColors, colorcode);
+
+      //make splat not display and drop show
+      let idOfSplat = colorcode + "splat";
+      document.getElementById(idOfSplat).style.display = "none";
+      document.getElementById(colorcode).style.display = "inline-block";
+
 
       //return
       return
     }
 
-    if (!element.classList.contains("active")) { //if the color is not selected
-      //add active class
-      element.classList.add("active");
+    if (!element.classList.contains("selected")) { //if the color is not selected
+      //add  class
+      element.classList.add("selected");
 
       //add to chosenColors array
       this.chosenColors.push(colorcode)
 
+      //make splat display and drop hide
+      let idOfSplat = colorcode + "splat";
+      document.getElementById(idOfSplat).style.display = "inline-block";
+      document.getElementById(colorcode).style.display = "none";
+
       //inner html add length of chosen colors array
-      element.innerHTML = this.chosenColors.length;
 
       //check length of chosen colors array
 

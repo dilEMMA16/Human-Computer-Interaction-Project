@@ -38,7 +38,7 @@ page-custompalette {
     }
 
     .active {
-      filter:brightness(.90);
+      transform: rotate(45deg) !important;
     }
 
     ion-row {
@@ -61,6 +61,22 @@ page-custompalette {
       border-top-left-radius: 50%;
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
+      color: white;
+      text-align: center;
+    }
+
+    .tear2 {
+      display: inline-block;
+      transform: rotate(135deg);
+      background-color: green;
+      width: 20px;
+      margin: 30px;
+      height: 20px;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      color: white;
+      text-align: center;
     }
 
 
