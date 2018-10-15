@@ -1,0 +1,176 @@
+<ion-header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid class="vertical-align-content">
+    <ion-row style="position:relative;">
+
+      <ion-col col-3></ion-col>
+      <ion-col col-2>
+        <div class="circle" (click)="navigateToHomePage()" style="padding-top:11px !important;"><img  id=chosenTheme src= "assets/imgs/custom.png"></div>
+      </ion-col>
+      <ion-col col-2>
+        <div class="circle" style="background-color:#9c9c9c; color:white;">colors</div>
+      </ion-col>
+      <ion-col col-2>
+        <div class="circle">fonts</div>
+      </ion-col>
+      <ion-col col-3></ion-col>
+      <div  style="width:100%; height:9vh; text-align:center; padding-top: 20px; font-size:140%">choose four colors</div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">reds</ion-col>
+    </ion-row>
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of reds" style="width:25%;float:left;height:90px; margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:block !important;margin: 20px auto auto; padding:3px;"></div>
+              <div class="" style="width: 25vw !important; height:100%; display:none;" (click)="selectColor(color)" id="{{color}}splat">
+              </div>
+        </div>
+      </div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">oranges</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of oranges; let i = index" style="height:90px;width:25%;float:left; margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:block !important;margin: 20px auto auto; padding:3px;"></div>
+              <div class="" style="width: 25vw !important; height:100%; display:none;" (click)="selectColor(color)" id="{{color}}splat">
+                <div class="tear2"  [style.background-color]="color"  style="" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">yellows</ion-col>
+    </ion-row>
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of yellows" style="width:25%;float:left; height:90px;margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)" [id]="color"[style.background-color]="color" style="display:block !important;margin: 20px auto auto; padding:3px;"></div>
+              <div class="" style="min-width: 25% !important; height:100%; display:none;" (click)="selectColor(color)" id="{{color}}splat">
+                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">greens</ion-col>
+    </ion-row>
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of greens" style="width:25%;float:left;height:90px; margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:block !important;margin: 20px auto auto;padding:3px;"></div>
+              <div class="" style="min-width: 25% !important;height:100%; display:none;" (click)="selectColor(color)" id="{{color}}splat">
+                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">blues</ion-col>
+    </ion-row>
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of blues" style="width:25%;float:left;height:90px; margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:block !important;margin: 20px auto auto; padding:3px;"></div>
+              <div class="" style="min-width: 25% !important; height:100%; display:none;" (click)="selectColor(color)" id="{{color}}splat">
+                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">purples</ion-col>
+    </ion-row>
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of purples" style="width:25%;float:left; height:90px;margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:block !important;margin: 20px auto auto; padding:3px;"></div>
+              <div class="" style="min-width: 25% !important; height:100%;  display:none;" (click)="selectColor(color)" id="{{color}}splat">
+                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">pinks</ion-col>
+    </ion-row>
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of pinks" style="width:25%;float:left;height:90px; margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)"  [id]="color" [style.background-color]="color" style="display:block !important;margin: 20px auto auto; padding:3px;"></div>
+              <div class="" style="min-width: 25% !important; height:100%;  display:none;" (click)="selectColor(color)" id="{{color}}splat">
+                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">grays</ion-col>
+    </ion-row>
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of grays" style="width:25%;float:left;height:90px; margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:block !important;margin: 20px auto auto; padding:3px;"></div>
+              <div class="" style="min-width: 25% !important; height:100%; display:none;" (click)="selectColor(color)" id="{{color}}splat">
+                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">creams</ion-col>
+    </ion-row>
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of creams" style="width:25%;float:left;height:90px; margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:block !important;margin: 20px auto auto; padding:3px;"></div>
+              <div class="" style="min-width: 25% !important; height:100%; display:none;" (click)="selectColor(color)" id="{{color}}splat">
+                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </ion-row>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">browns</ion-col>
+    </ion-row>
+    <ion-row>
+      <div style="width: 100%;">
+        <div *ngFor="let color of browns" style="width:25%;float:left; height:90px;margin: auto;" >
+              <div class="tear" (click) = "selectColor(color)" [id]="color" [style.background-color]="color" style="display:block !important;margin: 20px auto auto; padding:3px;"></div>
+              <div class="" style="min-width: 25% !important; height:100%; display:none;" (click)="selectColor(color)" id="{{color}}splat">
+                <div class="tear2"  [style.background-color]="color"  style="margin:20px;margin-bottom:30px;" > <p id="{{color}}tear" style="font-size:80%;transform:rotate(-135deg);"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </ion-row>
+
+
+  </ion-grid>
+
+
+</ion-content>

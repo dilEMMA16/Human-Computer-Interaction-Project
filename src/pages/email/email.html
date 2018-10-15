@@ -1,0 +1,66 @@
+<ion-header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</ion-header>
+
+<script>
+var emailDoc = version.document || version.contentDocument;
+// ...and then
+currentEmail = versionDoc.getElementById("selectedEmail").value;
+</script>
+
+<ion-content padding>
+
+  <ion-grid class="vertical-align-content">
+    <ion-row style="position:relative;">
+
+      <ion-col col-3></ion-col>
+      <ion-col col-2>
+        <div class="circle" (click)="navigateToHomePage()" style="background-color:#9c9c9c; color:white;">theme</div>
+      </ion-col>
+      <ion-col col-2>
+        <div class="circle" (click)="navigateToPalletePage()" style="background-color:#9c9c9c; color:white;">colors</div>
+      </ion-col>
+      <ion-col col-2>
+        <div class="circle" style="background-color:#9c9c9c; color:white;">fonts</div>
+      </ion-col>
+      <ion-col col-3></ion-col>
+      <div  style="width:100%; height:9vh; text-align:center; padding-top: 20px; font-size:140%">your selections</div>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:10px;">colors</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class = "col col-6">
+          <div class="tear summary" [id]="color1" [style.background-color]="color1" style="display:inline-block !important;margin:10px;"></div>
+          <br>{{color1}}
+      </ion-col>
+      <ion-col class = "col col-6">
+          <div class="tear summary" [id]="color2" [style.background-color]="color2" style="display:inline-block !important;margin:10px;"></div>
+            <br>{{color2}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class = "col col-6">
+          <div class="tear summary" [id]="color3" [style.background-color]="color3" style="display:inline-block !important;margin:10px;"></div>
+            <br>{{color3}}
+      </ion-col>
+      <ion-col class = "col col-6">
+          <div class="tear summary" [id]="color4" [style.background-color]="color4" style="display:inline-block !important;margin:10px;"></div>
+            <br>{{color4}}
+      </ion-col>
+    </ion-row>
+    <br><br>
+    <ion-row >
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:10px;">fonts</ion-col>
+    </ion-row>
+    <br><br>
+
+    <button block (click)="sendEmail()" style= "width: 100%; height: 10vh; background-color: #cecece; color: white; text-align:center; padding-right: auto; padding-left: auto;">email the css code</button>
+
+
+
+  </ion-grid>
+
+
+</ion-content>
