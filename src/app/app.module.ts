@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PalettePage } from '../pages/palette/palette';
 import { CustomPalettePage } from '../pages/custompalette/custompalette';
+import { EmailPage } from '../pages/email/email';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     PalettePage,
-    CustomPalettePage
+    CustomPalettePage,
+    EmailPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { CustomPalettePage } from '../pages/custompalette/custompalette';
     MyApp,
     HomePage,
     PalettePage,
-    CustomPalettePage
+    CustomPalettePage,
+    EmailPage
   ],
   providers: [
     StatusBar,
