@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
+import { EmailComposer } from '@ionic-native/email-composer';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PalettePage } from '../pages/palette/palette';
@@ -35,6 +35,7 @@ import { FontPage } from '../pages/font/font';
   ],
   providers: [
     StatusBar,
+    EmailComposer,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
