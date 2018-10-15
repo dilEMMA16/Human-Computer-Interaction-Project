@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 
+import { EmailPage} from "../email/email";
+
 @Component({
   selector: 'page-custompalette',
   templateUrl: 'custompalette.html'
@@ -41,6 +43,39 @@ export class CustomPalettePage {
   }
 
 
+  navigateToEmailPage() {
+
+    // //reset selections
+    // for (let color of this.chosenColors) {
+    //   let element: HTMLElement = document.getElementById(color);
+    //
+    //   if (element.classList.contains("selected")) { //if the color is currently selected
+    //     //remove classes
+    //     element.classList.remove("selected");
+    //
+    //     //remove from chosenColors array
+    //     this.remove(this.chosenColors, color);
+    //
+    //
+    //     //make splat not display and drop show
+    //     let idOfSplat = color + "splat";
+    //     document.getElementById(idOfSplat).style.display = "none";
+    //     document.getElementById(color).style.display = "inline-flex";
+    // }
+
+    this.navCtrl.push(EmailPage, {
+      'data' : 'custom',
+      'color1' : this.chosenColors[0],
+      'color2' : this.chosenColors[1],
+      'color3' : this.chosenColors[2],
+      'color4' : this.chosenColors[3],
+
+    });
+
+  }
+
+
+
   selectColor(colorcode)  {
 
     //check if element has class inactive or active = toggle to whatever one
@@ -58,7 +93,9 @@ export class CustomPalettePage {
       //make splat not display and drop show
       let idOfSplat = colorcode + "splat";
       document.getElementById(idOfSplat).style.display = "none";
-      document.getElementById(colorcode).style.display = "inline-flex";
+
+      document.getElementById(colorcode).style.display = "block";
+
 
       //reorder selected colors
       let number = 1;
@@ -71,7 +108,9 @@ export class CustomPalettePage {
         //content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:auto; margin-left:auto;background-color:"+choice+"'></div>';"
         content.innerHTML = "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:auto; margin-left:auto;background-color:"+choice+"'><p id='" + idOfSplat +"p' style='padding-bottom:25px;padding-left:45px;transform:rotate(225deg);color:#9c9c9c;'>" + "</p></div>';"
         var content2 = document.getElementById(choice + "splat"+"p");
-        content2.innerHTML = number;
+
+        content2.innerHTML = number +"";
+
         number++;
       }
 
@@ -89,7 +128,9 @@ export class CustomPalettePage {
 
       //make splat display and drop hide
       let idOfSplat = colorcode + "splat";
-      document.getElementById(idOfSplat).style.display = "inline-flex";
+
+      document.getElementById(idOfSplat).style.display = "block";
+
       document.getElementById(colorcode).style.display = "none";
 
       //reorder selected colors
@@ -102,7 +143,9 @@ export class CustomPalettePage {
        //content.innerHTML = number + "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:auto; margin-left:auto;background-color:"+choice+"'></div>';"
         content.innerHTML = "<br><div class='tear2'id='"+ choice + "tear'style='margin-right:auto; margin-left:auto;background-color:"+choice+"'><p id='" + idOfSplat +"p' style='padding-bottom:25px;padding-left:45px;transform:rotate(225deg);color:#9c9c9c;'>" + "</p></div>';"
         var content2 = document.getElementById(choice + "splat"+"p");
-        content2.innerHTML = number;
+
+        content2.innerHTML = number +"";
+
         number++;
       }
 
@@ -110,8 +153,19 @@ export class CustomPalettePage {
 
       //check length of chosen colors array
 
+
+
+    }
+
+    //if length == 4 ---> go to font page
+    if (this.chosenColors.length == 4) {
+      this.navigateToEmailPage();
+  }
+
+
         //if length == 4 ---> go to font page
     }
+
 
 
   }
