@@ -1,130 +1,38 @@
-<!--
-<ion-header>
 
-</ion-header> -->
 
 <ion-content no-padding>
-  <div (click)="navigateToHomePage()" style="background-color:#d3d3d3;color:white;position:fixed;left:20px;top:0px;padding:10px;">back to main
+  <div (click)="navigateToHomePage()" style="background-color:#d3d3d3;z-index: 6;color:white;position:fixed;left:20px;top:0px;padding:10px;">back
   </div>
-  <ion-grid class="vertical-align-content">
-
+  <ion-grid class="vertical-align-content" style="padding:5px;height:14%;">
 
     <ion-row style="width:100%; text-align:center; height:8vh;margin:5px;font-style: italic;">
       <ion-col col-12 style="padding:20px;font-size:140%;">
         your saved themes
       </ion-col>
     </ion-row>
-        <!-- <ion-col col-3></ion-col> -->
 
-    <ion-row class="align-bottom" style="margin-bottom:5px;">
-      <ion-col col-4  (click)="navigateToPalettePage('assets/imgs/natural.png')"><img  src="assets/imgs/natural.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/summer.png')"><img  src="assets/imgs/summer.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/fall.png')"><img  src="assets/imgs/fall.png"></ion-col>
-    </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/natural.png')">natural<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/summer.png')">summer<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/fall.png')">fall<br><br></ion-col>
-    </ion-row>
-    <ion-row class="align-bottom" style="margin-bottom:5px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/tech.png')"><img  src="assets/imgs/tech.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/warm.png')"><img  src="assets/imgs/warm.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/sophisticated.png')"><img  src="assets/imgs/sophisticated.png"></ion-col>
-    </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/tech.png')">tech<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/warm.png')">warm<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/sophisticated.png')">sophisticated<br><br></ion-col>
-    </ion-row>
-    <ion-row class="align-bottom" style="margin-bottom:5px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/wellbeing.png')"><img src="assets/imgs/wellbeing.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/bold.png')"><img  src="assets/imgs/bold.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/cool.png')"><img  src="assets/imgs/cool.png"></ion-col>
-    </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/wellbeing.png')">wellbeing<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/bold.png')">bold<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/cool.png')">cool<br><br></ion-col>
-    </ion-row>
-    <ion-row class="align-bottom" style="margin-bottom:5px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/rustic.png')"><img src="assets/imgs/rustic.png"></ion-col>
-      <ion-col col-4 ><img  src="assets/imgs/random.png"></ion-col>
-      <ion-col col-4 (click) = "customThemeChosen()"><img  src="assets/imgs/custom.png"></ion-col>
-    </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/rustic.png')">rustic<br><br></ion-col>
-      <ion-col col-4>random<br><br></ion-col>
-      <ion-col col-4 (click) = "customThemeChosen()">custom<br><br></ion-col>
-    </ion-row>
-
+    <!-- <ion-row *ngFor="let theme of savedThemes; let i = index" >
+        <ion-col col-11>
+          <button ion-button block style="height:8.6rem;"  >
+            {{theme.name}}
+          </button>
+        </ion-col>
+        <ion-col col-1><button ion-button color="danger" block style="height:8.6rem;" >
+          X
+        </button></ion-col>
+      </ion-row> -->
   </ion-grid>
+  <div *ngFor="let theme of savedThemes; let i = index" style="height:30vh;margin-bottom:5vh;">
+      {{theme.name}}<hr><br><br>
+
+          <div class="tear" [style.background-color]="theme.color1" style="display:inline-block !important;"></div>
+          <div class="tear" [style.background-color]="theme.color2" style="display:inline-block !important;"></div>
+          <div class="tear" [style.background-color]="theme.color3" style="display:inline-block !important;"></div>
+          <div class="tear" [style.background-color]="theme.color4" style="display:inline-block !important;"></div>
+          <br>
+          <h1 [style.font-family]="theme.font1">{{theme.font1}}</h1>
+          <h2 [style.font-family]="theme.font2">{{theme.font2}}</h2>
+
+  </div>
 
 </ion-content>
-<!-- =======
-<ion-header>
-
-</ion-header>
-
-<ion-content no-padding>
-  <ion-grid class="vertical-align-content">
-
-    <ion-row id="hometop">
-
-
-      <ion-col col-3></ion-col>
-      <ion-col col-2>
-        <div class="circle" style="background-color:#9c9c9c; color:white;">theme</div>
-      </ion-col>
-      <ion-col col-2>
-        <div class="circle">colors</div>
-      </ion-col>
-      <ion-col col-2>
-        <div class="circle">fonts</div>
-      </ion-col>
-      <ion-col col-3></ion-col>
-      <div  style="width:100%; height:10vw; text-align:center; padding-top: 20px; font-size:140%">choose a theme</div>
-    </ion-row>
-    <ion-row class="align-bottom" style="margin-bottom:5px;">
-      <ion-col col-4  (click)="navigateToPalettePage('assets/imgs/natural.png')"><img  src="assets/imgs/natural.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/summer.png')"><img  src="assets/imgs/summer.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/fall.png')"><img  src="assets/imgs/fall.png"></ion-col>
-    </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/natural.png')">natural<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/summer.png')">summer<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/fall.png')">fall<br><br></ion-col>
-    </ion-row>
-    <ion-row class="align-bottom" style="margin-bottom:5px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/tech.png')"><img  src="assets/imgs/tech.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/warm.png')"><img  src="assets/imgs/warm.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/sophisticated.png')"><img  src="assets/imgs/sophisticated.png"></ion-col>
-    </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/tech.png')">tech<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/warm.png')">warm<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/sophisticated.png')">sophisticated<br><br></ion-col>
-    </ion-row>
-    <ion-row class="align-bottom" style="margin-bottom:5px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/wellbeing.png')"><img src="assets/imgs/wellbeing.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/bold.png')"><img  src="assets/imgs/bold.png"></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/cool.png')"><img  src="assets/imgs/cool.png"></ion-col>
-    </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/wellbeing.png')">wellbeing<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/bold.png')">bold<br><br></ion-col>
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/cool.png')">cool<br><br></ion-col>
-    </ion-row>
-    <ion-row class="align-bottom" style="margin-bottom:5px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/rustic.png')"><img src="assets/imgs/rustic.png"></ion-col>
-      <ion-col col-4 ><img  src="assets/imgs/random.png"></ion-col>
-      <ion-col col-4 (click) = "customThemeChosen()"><img  src="assets/imgs/custom.png"></ion-col>
-    </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
-      <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/rustic.png')">rustic<br><br></ion-col>
-      <ion-col col-4>random<br><br></ion-col>
-      <ion-col col-4 (click) = "customThemeChosen()">custom<br><br></ion-col>
-    </ion-row>
-  </ion-grid>
-
-</ion-content>
->>>>>>> ae28ee429d8b33d1a53fc6b6265df2434a56a54d -->
