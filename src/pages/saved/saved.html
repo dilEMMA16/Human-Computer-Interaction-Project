@@ -24,7 +24,7 @@
   </ion-grid>
   <div *ngFor="let theme of savedThemes; let i = index" style="height:35vh;margin-bottom:5vh;background-color: #f7f4f4;padding-top:15px;">
       {{theme.name}}<hr>
-      <button color="light" style="color:#cecece;font-size:80%;" ion-button clear (click)="emailTheme()">email</button>
+      <button color="light" style="color:#cecece;font-size:80%;" ion-button clear (click)="emailTheme(theme)">email</button>
       <span style="color:#cecece;">|</span>
       <button color="light" style="color:#f7a0a0;font-size:80%;" ion-button clear (click)="deleteTheme(i)">delete</button>
       <br><br>

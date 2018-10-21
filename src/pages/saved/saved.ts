@@ -28,10 +28,10 @@ savedThemes: any;
       this.navCtrl.pop();
   }
 
-  emailTheme(){
+  emailTheme(theme){
 
         //let emailContent = color1 + " " + color2 + " " + color3 + " " + color4;
-        let emailContent = "//put in css file:<br>:root{<br>--color-one:" + this.color1 +";<br>--color-two:" + this.color2 +";<br>--color-three:" + this.color3 + ";<br>--color-four:" + this.color4 + ";<br>}<br>//to use these css variables =   background-color: var(--color-one);"
+        let emailContent = "//put in css file:<br>:root{<br>--color-one:" + theme.color1 +";<br>--color-two:" + theme.color2 +";<br>--color-three:" + theme.color3 + ";<br>--color-four:" + theme.color4 + ";<br>}<br>//to use these css variables =   background-color: var(--color-one);"
 
         let email = {
           to: '',
