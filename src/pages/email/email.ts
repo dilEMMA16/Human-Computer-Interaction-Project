@@ -25,7 +25,7 @@ export class EmailPage {
     this.color3 = navParams.get('color3');
     this.color4 = navParams.get('color4');
     this.email = "";
-    this.theme = navParams.get('theme');
+    this.theme = "assets/imgs/"+navParams.get('data')+".png";
 
   }
 

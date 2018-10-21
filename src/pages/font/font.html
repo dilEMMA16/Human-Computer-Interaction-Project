@@ -2,14 +2,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      font page placeholder
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-grid>
+    <ion-row id="hometop" style="position: fixed; width:100%; bottom:0px;background-color: #f7f4f4;vertical-align:top ;border-top:1px solid #d3d3d3 !important;border-bottom:1px solid #c9c9c9;">
+      <!-- <ion-col col-3></ion-col> -->
+
+      <ion-col col-4 (click)="navigateToHomePage()" style=" padding:20px;padding-top:13px;padding-bottom:13px;font-size:140%;background-color:white;">
+        <img style="height:23px;width:23px;"id=chosenTheme [src]= "theme">
+      </ion-col>
+      <ion-col col-4 (click)="navigateToPalletePage()" style="padding:20px;padding-top:17px;font-size:140%;background-color:white;">
+        <div class="tear3" [style.background-color]="color1" style="display:inline-block !important;"></div>
+        <div class="tear3" [style.background-color]="color2" style="display:inline-block !important;"></div>
+        <div class="tear3" [style.background-color]="color3" style="display:inline-block !important;"></div>
+        <div class="tear3" [style.background-color]="color4" style="display:inline-block !important;"></div>
+      </ion-col>
+      <ion-col col-4 style="padding:20px;font-size:140%;">
+        fonts
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

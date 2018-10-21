@@ -10,6 +10,7 @@ import { PalettePage } from '../pages/palette/palette';
 import { CustomPalettePage } from '../pages/custompalette/custompalette';
 import { EmailPage } from '../pages/email/email';
 import { FontPage } from '../pages/font/font';
+import { SavedPage } from '../pages/saved/saved';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FontPage } from '../pages/font/font';
     PalettePage,
     CustomPalettePage,
     EmailPage,
-    FontPage
+    FontPage,
+    SavedPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { FontPage } from '../pages/font/font';
     PalettePage,
     CustomPalettePage,
     EmailPage,
-    FontPage
+    FontPage,
+    SavedPage
   ],
   providers: [
     StatusBar,

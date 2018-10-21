@@ -4,14 +4,14 @@
 </ion-header> -->
 
 <ion-content no-padding>
-  <div (click)="savedThemes()" style="background-color:#d3d3d3;color:white;position:fixed;left:20px;top:0px;padding:10px;">saved themes
+  <div (click)="navigateToHomePage()" style="background-color:#d3d3d3;color:white;position:fixed;left:20px;top:0px;padding:10px;">back to main
   </div>
   <ion-grid class="vertical-align-content">
 
 
     <ion-row style="width:100%; text-align:center; height:8vh;margin:5px;font-style: italic;">
       <ion-col col-12 style="padding:20px;font-size:140%;">
-        choose a category
+        your saved themes
       </ion-col>
     </ion-row>
         <!-- <ion-col col-3></ion-col> -->
@@ -56,19 +56,7 @@
       <ion-col col-4>random<br><br></ion-col>
       <ion-col col-4 (click) = "customThemeChosen()">custom<br><br></ion-col>
     </ion-row>
-    <ion-row id="hometop" style="position: fixed; width:100%; bottom:0px;background-color: #f7f4f4;vertical-align:top ;border-top:1px solid #d3d3d3 !important;border-bottom:1px solid #c9c9c9;">
-      <!-- <ion-col col-3></ion-col> -->
 
-      <ion-col col-4 style=" padding:20px;padding-top:17px;font-size:140%;background-color:white;border-top:1px solid #d3d3d3;">
-        category
-      </ion-col>
-      <ion-col col-4 style="padding:20px;font-size:140%;">
-        colors
-      </ion-col>
-      <ion-col col-4 style="padding:20px;font-size:140%;">
-        fonts
-      </ion-col>
-    </ion-row>
   </ion-grid>
 
 </ion-content>

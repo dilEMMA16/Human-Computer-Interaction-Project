@@ -22,7 +22,10 @@ page-email {
   font-size:100%;
   text-align: center;
 }
-
+#hometop {
+  height: 8vh;
+  // margin-bottom: 7vh;
+}
     ion-content {
       font-family: 'Josefin Slab', serif;
       color: #9c9c9c !important;
@@ -65,13 +68,13 @@ page-email {
       text-align: center;
     }
 
-    .tear2 {
-      display: inline-block;
+    .tear3 {
+      display: inline;
       transform: rotate(135deg);
       background-color: green;
-      width: 20px;
-      margin: 30px;
-      height: 20px;
+      width: 14px;
+      //margin: 30px;
+      height: 14px;
       border-top-left-radius: 50%;
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;

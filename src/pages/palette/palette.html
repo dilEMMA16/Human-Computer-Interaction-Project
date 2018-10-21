@@ -1,11 +1,17 @@
-<ion-header>
 
-</ion-header>
 
-<ion-content padding>
+<ion-content no-padding>
+  <div style="background-color:#d3d3d3;color:white;position:fixed;left:20px;top:0px;padding:10px;">saved themes
+  </div>
+  <ion-grid class="vertical-align-content" style="padding:5px;">
 
-  <ion-grid class="vertical-align-content">
-    <ion-row style="position:relative;">
+
+    <ion-row style="width:100%; text-align:center; height:8vh;margin:5px;font-style: italic;">
+      <ion-col col-12 style="padding:20px;font-size:140%;">
+        choose a palette
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row style="position:relative;">
 
       <ion-col col-3></ion-col>
       <ion-col col-2>
@@ -19,38 +25,62 @@
       </ion-col>
       <ion-col col-3></ion-col>
       <div  style="width:100%; height:9vh; text-align:center; padding-top: 20px; font-size:140%">choose a palette</div>
-    </ion-row>
-    <ion-row >
+    </ion-row> -->
+    <ion-row (click)="navigateToFontPage(p1)" >
       <ion-col class = "col col-16">palette #1 </ion-col>
-      <div *ngFor="let color of p1" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+      <div *ngFor="let color of p1" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;">
           <ion-col class="col">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
           </ion-col>
       </div>
     </ion-row>
-    <ion-row style="">
+    <ion-row (click)="navigateToFontPage(p2)" style="">
       <ion-col class = "col col-16">palette #2 </ion-col>
-      <div *ngFor="let color of p2" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+      <div *ngFor="let color of p2" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;">
           <ion-col class="col" style="">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
           </ion-col>
       </div>
     </ion-row>
-    <ion-row>
+    <ion-row (click)="navigateToFontPage(p3)" >
       <ion-col class = "col col-16">palette #3 </ion-col>
-      <div *ngFor="let color of p3" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+      <div *ngFor="let color of p3" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;">
           <ion-col class="col">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
           </ion-col>
       </div>
     </ion-row>
-    <ion-row>
+    <ion-row (click)="navigateToFontPage(p4)" >
       <ion-col class = "col col-16">palette #4 </ion-col>
-      <div *ngFor="let color of p4" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;">
+      <div *ngFor="let color of p4" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;">
           <ion-col class="col">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
           </ion-col>
       </div>
+    </ion-row>
+    <!-- <ion-row id="hometop" style="background-color: #f7f4f4;vertical-align:top ;border-top:2px solid #c9c9c9;border-bottom:2px solid #c9c9c9;">
+      <ion-col col-4 (click)="navigateToHomePage()"  style=" padding:12.5px;font-size:140%;color: white;background-color: #c9c9c9;">
+        <img style="height:30px;"id=chosenTheme [src]= "theme">
+      </ion-col>
+      <ion-col col-4 style="padding:20px;font-size:140%;color: white;background-color: #c9c9c9;">
+        colors
+      </ion-col>
+      <ion-col col-4 style="padding:20px;font-size:140%;">
+        fonts
+      </ion-col>
+    </ion-row> -->
+    <ion-row id="hometop" style="position: fixed; width:100%; bottom:0px;background-color: #f7f4f4;vertical-align:top ;border-top:1px solid #d3d3d3 !important;border-bottom:1px solid #c9c9c9;">
+      <!-- <ion-col col-3></ion-col> -->
+
+      <ion-col col-4 (click)="navigateToHomePage()" style=" padding:20px;padding-top:13px;padding-bottom:13px;font-size:140%;background-color:white;">
+        <img style="height:23px;width:23px;"id=chosenTheme [src]= "theme">
+      </ion-col>
+      <ion-col col-4 style="padding:20px;padding-top:17px;font-size:140%;background-color:white;border-top:1px solid #d3d3d3;">
+        colors
+      </ion-col>
+      <ion-col col-4 style="padding:20px;font-size:140%;">
+        fonts
+      </ion-col>
     </ion-row>
   </ion-grid>
 

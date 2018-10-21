@@ -2,10 +2,29 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </ion-header>
 
-<ion-content padding>
-
+<ion-content no-padding>
+  <div style="background-color:#d3d3d3;z-index: 6;color:white;position:fixed;left:20px;top:0px;padding:10px;">saved themes
+  </div>
   <ion-grid class="vertical-align-content">
-    <ion-row style="position:relative;">
+
+    <!-- <ion-row id="hometop" style="vertical-align:top ;">
+
+      <ion-col col-4 (click)="navigateToHomePage()" style="border-left:2px solid #c9c9c9;border-bottom:2px solid #c9c9c9;padding:12.5px;border-top:2px solid #c9c9c9;font-size:140%;color: white;">
+        <img  id=chosenTheme src= "assets/imgs/custom.png">
+      </ion-col>
+      <ion-col col-4 style="border-bottom:2px solid #c9c9c9;border-top:2px solid #c9c9c9;padding:20px;font-size:140%;color: white;background-color: #c9c9c9;">
+        colors
+      </ion-col>
+      <ion-col col-4 style="border-bottom:2px solid #c9c9c9;border-top:2px solid #c9c9c9;border-right:2px solid #c9c9c9;padding:20px;font-size:140%;">
+        fonts
+      </ion-col>
+    </ion-row> -->
+    <ion-row style="width:100%; text-align:center; height:8vh;margin:5px;font-style: italic;">
+      <ion-col col-12 style="padding:20px;font-size:140%;">
+        choose four colors
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row style="position:relative;">
 
       <ion-col col-3></ion-col>
       <ion-col col-2>
@@ -19,10 +38,10 @@
       </ion-col>
       <ion-col col-3></ion-col>
       <div  style="width:100%; height:9vh; text-align:center; padding-top: 20px; font-size:140%">choose four colors</div>
-    </ion-row>
-    <br><br>
+    </ion-row> -->
+    <br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">reds</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">reds</ion-col>
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
@@ -35,7 +54,7 @@
     </ion-row>
     <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">oranges</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">oranges</ion-col>
     </ion-row>
 
     <ion-row>
@@ -51,7 +70,7 @@
     </ion-row>
     <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">yellows</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">yellows</ion-col>
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
@@ -66,7 +85,7 @@
     </ion-row>
     <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">greens</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">greens</ion-col>
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
@@ -81,7 +100,7 @@
     </ion-row>
     <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">blues</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">blues</ion-col>
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
@@ -96,7 +115,7 @@
     </ion-row>
     <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">purples</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">purples</ion-col>
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
@@ -111,7 +130,7 @@
     </ion-row>
     <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">pinks</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">pinks</ion-col>
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
@@ -126,7 +145,7 @@
     </ion-row>
     <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">grays</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">grays</ion-col>
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
@@ -141,7 +160,7 @@
     </ion-row>
     <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">creams</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">creams</ion-col>
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
@@ -155,7 +174,7 @@
       </div>
     </ion-row>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">browns</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:40px;">browns</ion-col>
     </ion-row>
     <ion-row>
       <div style="width: 100%;">
@@ -167,6 +186,30 @@
               </div>
         </div>
       </div>
+    </ion-row>
+    <!-- <ion-row id="hometop" style="background-color: #f7f4f4;vertical-align:top ;border-top:2px solid #c9c9c9;border-bottom:2px solid #c9c9c9;">
+      <ion-col col-4 (click)="navigateToHomePage()"  style=" padding:12.5px;font-size:140%;color: white;background-color: #c9c9c9;">
+        <img  id=chosenTheme src= "assets/imgs/custom.png">
+      </ion-col>
+      <ion-col col-4 style="padding:20px;font-size:140%;color: white;background-color: #c9c9c9;">
+        colors
+      </ion-col>
+      <ion-col col-4 style="padding:20px;font-size:140%;">
+        fonts
+      </ion-col>
+    </ion-row> -->
+    <ion-row id="hometop" style="position: fixed; width:100%; bottom:0px;background-color: #f7f4f4;vertical-align:top ;border-top:1px solid #d3d3d3 !important;border-bottom:1px solid #c9c9c9;">
+      <!-- <ion-col col-3></ion-col> -->
+
+      <ion-col col-4 (click)="navigateToHomePage()" style=" padding:20px;padding-top:13px;padding-bottom:13px;font-size:140%;background-color:white;">
+        <img style="height:23px;width:23px;"id=chosenTheme src= "assets/imgs/custom.png">
+      </ion-col>
+      <ion-col col-4 style="padding:20px;padding-top:17px;font-size:140%;background-color:white;border-top:1px solid #d3d3d3;">
+        colors
+      </ion-col>
+      <ion-col col-4 style="padding:20px;font-size:140%;">
+        fonts
+      </ion-col>
     </ion-row>
 
 

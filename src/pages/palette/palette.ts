@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 import { IonicPage } from 'ionic-angular';
 import { HomePage} from "../home/home";
+import { FontPage} from "../font/font";
 
 @Component({
   selector: 'page-palette',
@@ -29,6 +30,17 @@ export class PalettePage {
 
   navigateToHomePage() {
       this.navCtrl.pop();
+  }
+
+  navigateToFontPage(chosenPalette) {
+    this.navCtrl.push(FontPage, {
+      'data' : this.theme,
+      'color1' : chosenPalette[0],
+       'color2' : chosenPalette[1],
+       'color3' : chosenPalette[2],
+       'color4' : chosenPalette[3]
+
+    });
   }
 
 
