@@ -78,6 +78,10 @@ export class EmailPage {
 
     saveTheme() {
       console.log(this.themeName);
+      let element: HTMLElement = document.getElementById("inputofname");
+      element.style.backgroundColor = "#d2f2d2";
+      element.style.color = "#32db64";
+      element.innerHTML = "your theme " + this.themeName + " was saved successfully!";
       this.saveThemeProvider.saveTheme(this.themeName,this.color1,this.color2,this.color3,this.color4,this.font1,this.font2);
       console.log(this.saveThemeProvider.getAllSavedThemesArray());
     }

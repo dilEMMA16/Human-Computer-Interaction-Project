@@ -49,8 +49,25 @@ page-saved {
       height: 30px;
     }
 
+    #email {
+      color:#cecece;font-size:80%;
+    }
+
+    .gray {
+      color:#cecece;
+    }
+
+    #savedDiv {
+      height:45vh;margin-bottom:5vh;background-color: #f7f4f4;padding-top:15px;
+    }
+
+    #delete {
+      color:#f7a0a0;font-size:80%;
+    }
+
     .tear {
       display: inline-block;
+      display:inline-block !important;
       transform: rotate(-45deg);
       background-color: green;
       width: 30px;

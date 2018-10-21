@@ -55,6 +55,8 @@ export class SaveThemeProvider {
       });
   }
 
+
+
   getAllSavedThemes() {
     return this.storage.ready().then(() => {
       return this.storage.get(STORAGE_KEY);

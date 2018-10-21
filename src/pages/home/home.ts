@@ -18,7 +18,6 @@ export class HomePage {
 
   savedThemes():void{
     this.navCtrl.push(SavedPage, {
-      dummy:"dummy",
       dummy2:"dummy2"
     });
 

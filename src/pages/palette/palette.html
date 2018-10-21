@@ -3,10 +3,10 @@
 <ion-content no-padding>
   <div (click)="savedThemes()" style="background-color:#d3d3d3;color:white;position:fixed;left:20px;top:0px;padding:10px;z-index:6;">saved themes
   </div>
-  <ion-grid class="vertical-align-content" style="padding:5px;">
+  <ion-grid class="vertical-align-content" style="padding:0px;">
 
 
-    <ion-row style="width:100%; text-align:center; height:8vh;margin:5px;font-style: italic;">
+    <ion-row style="width:100%; text-align:center; padding:5px;padding-top:20px;height:15vh;margin:5px;font-style: italic;">
       <ion-col col-12 style="padding:20px;font-size:140%;">
         choose a palette
       </ion-col>
@@ -28,7 +28,7 @@
     </ion-row> -->
     <ion-row (click)="navigateToFontPage(p1)" >
       <ion-col class = "col col-16">palette #1 </ion-col>
-      <div *ngFor="let color of p1" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;font-size:80%;">
+      <div *ngFor="let color of p1" style="width:21%;border-bottom: 1px solid #cecece; padding:5px;padding-bottom: 10px;font-size:80%;">
           <ion-col class="col">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
             <br><br>{{color}}
@@ -37,7 +37,7 @@
     </ion-row>
     <ion-row (click)="navigateToFontPage(p2)" style="">
       <ion-col class = "col col-16">palette #2 </ion-col>
-      <div *ngFor="let color of p2" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;font-size:80%;">
+      <div *ngFor="let color of p2" style="width:21%;border-bottom: 1px solid #cecece; padding:5px;padding-bottom: 10px;font-size:80%;">
           <ion-col class="col" style="">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
             <br><br>{{color}}
@@ -46,7 +46,7 @@
     </ion-row>
     <ion-row (click)="navigateToFontPage(p3)" >
       <ion-col class = "col col-16">palette #3 </ion-col>
-      <div *ngFor="let color of p3" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;font-size:80%;">
+      <div *ngFor="let color of p3" style="width:21%;padding:5px;border-bottom: 1px solid #cecece; padding-bottom: 10px;font-size:80%;">
           <ion-col class="col">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
             <br><br>{{color}}
@@ -55,7 +55,7 @@
     </ion-row>
     <ion-row (click)="navigateToFontPage(p4)" >
       <ion-col class = "col col-16">palette #4 </ion-col>
-      <div *ngFor="let color of p4" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;font-size:80%;">
+      <div *ngFor="let color of p4" style="width:21%;padding:5px;border-bottom: 1px solid #cecece; padding-bottom: 10px;font-size:80%;">
           <ion-col class="col">
             <div class="tear" [style.background-color]="color" style="display:inline-block !important;"></div>
             <br><br>{{color}}
@@ -73,16 +73,16 @@
         fonts
       </ion-col>
     </ion-row> -->
-    <ion-row id="hometop" style="position: fixed; width:100%; bottom:0px;background-color: #f7f4f4;vertical-align:top ;border-top:1px solid #d3d3d3 !important;border-bottom:1px solid #c9c9c9;">
+    <ion-row id="hometop" style="position: fixed; width:100vw;z-index: 3;bottom:0px;vertical-align:top ;border-top:1px solid #d3d3d3 !important;">
       <!-- <ion-col col-3></ion-col> -->
 
-      <ion-col col-4 (click)="navigateToHomePage()" style=" padding:20px;padding-top:13px;padding-bottom:13px;font-size:140%;background-color:white;">
-        <img style="height:23px;width:23px;"id=chosenTheme [src]= "theme">
+      <ion-col col-4 (click)="navigateToHomePage()" style=" padding:15px;padding-top:13px;padding-bottom:13px;font-size:140%;background-color:#f7f4f4;">
+        <img style="height:20px;width:20px;"id=chosenTheme [src]= "theme">
       </ion-col>
-      <ion-col col-4 style="padding:20px;padding-top:17px;font-size:140%;background-color:white;border-top:1px solid #d3d3d3;">
+      <ion-col col-4 style="padding:15px;padding-top:17px;font-size:140%;background-color:#f7f4f4;">
         colors
       </ion-col>
-      <ion-col col-4 style="padding:20px;font-size:140%;">
+      <ion-col col-4 style="padding:15px;font-size:140%;background-color: #e8e5e5;height:100%;">
         fonts
       </ion-col>
     </ion-row>
