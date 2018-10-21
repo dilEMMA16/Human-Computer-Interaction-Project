@@ -22,16 +22,40 @@
         </button></ion-col>
       </ion-row> -->
   </ion-grid>
-  <div *ngFor="let theme of savedThemes; let i = index" style="height:30vh;margin-bottom:5vh;">
-      {{theme.name}}<hr><br><br>
+  <div *ngFor="let theme of savedThemes; let i = index" style="height:35vh;margin-bottom:5vh;background-color: #f7f4f4;padding-top:15px;">
+      {{theme.name}}<hr>
+      <button color="light" style="color:#cecece;font-size:80%;" ion-button clear (click)="emailTheme()">email</button>
+      <span style="color:#cecece;">|</span>
+      <button color="light" style="color:#f7a0a0;font-size:80%;" ion-button clear (click)="deleteTheme(i)">delete</button>
+      <br><br>
+          <ion-grid>
+            <ion-row>
+              <ion-col class="col col-3">
+                <div class="tear" [style.background-color]="theme.color1" style="display:inline-block !important;"></div>
+              </ion-col>
+              <ion-col class="col col-3">
+                <div class="tear" [style.background-color]="theme.color2" style="display:inline-block !important;"></div>
+              </ion-col>
+              <ion-col class="col col-3">
+                <div class="tear" [style.background-color]="theme.color3" style="display:inline-block !important;"></div>
+              </ion-col>
+              <ion-col class="col col-3">
+                <div class="tear" [style.background-color]="theme.color4" style="display:inline-block !important;"></div>
+              </ion-col>
+            </ion-row><br><br>
+            <ion-row>
+              <ion-col class="col col-3">{{theme.color1}}</ion-col>
+              <ion-col class="col col-3">{{theme.color2}}</ion-col>
+              <ion-col class="col col-3">{{theme.color3}}</ion-col>
+              <ion-col class="col col-3">{{theme.color4}}</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="col col-6"><h1 [style.font-family]="theme.font1" style="color:#cecece;">{{theme.font1}}</h1></ion-col>
+              <ion-col class="col col-6"><h2 [style.font-family]="theme.font2" style="color:#cecece;">{{theme.font2}}</h2></ion-col>
+            </ion-row>
 
-          <div class="tear" [style.background-color]="theme.color1" style="display:inline-block !important;"></div>
-          <div class="tear" [style.background-color]="theme.color2" style="display:inline-block !important;"></div>
-          <div class="tear" [style.background-color]="theme.color3" style="display:inline-block !important;"></div>
-          <div class="tear" [style.background-color]="theme.color4" style="display:inline-block !important;"></div>
-          <br>
-          <h1 [style.font-family]="theme.font1">{{theme.font1}}</h1>
-          <h2 [style.font-family]="theme.font2">{{theme.font2}}</h2>
+
+        </ion-grid>
 
   </div>
 

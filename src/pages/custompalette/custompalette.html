@@ -3,7 +3,7 @@
 </ion-header>
 
 <ion-content no-padding>
-  <div style="background-color:#d3d3d3;z-index: 6;color:white;position:fixed;left:20px;top:0px;padding:10px;">saved themes
+  <div (click)="savedThemes()" style="background-color:#d3d3d3;z-index: 6;color:white;position:fixed;left:20px;top:0px;padding:10px;">saved themes
   </div>
   <ion-grid class="vertical-align-content">
 
@@ -187,6 +187,7 @@
         </div>
       </div>
     </ion-row>
+    <div style="height:7vh;"></div>
     <!-- <ion-row id="hometop" style="background-color: #f7f4f4;vertical-align:top ;border-top:2px solid #c9c9c9;border-bottom:2px solid #c9c9c9;">
       <ion-col col-4 (click)="navigateToHomePage()"  style=" padding:12.5px;font-size:140%;color: white;background-color: #c9c9c9;">
         <img  id=chosenTheme src= "assets/imgs/custom.png">
