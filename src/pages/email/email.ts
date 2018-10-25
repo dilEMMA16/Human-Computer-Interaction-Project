@@ -55,11 +55,11 @@ export class EmailPage {
   }
 
   startNewTheme():void{
-    this.navCtrl.push(HomePage, {
-      dummy:"dummy",
-      dummy2:"dummy2"
-    });
-
+    // this.navCtrl.push(HomePage, {
+    //   dummy:"dummy",
+    //   dummy2:"dummy2"
+    // });
+    this.navCtrl.popToRoot();
   }
 
   triggerSaveTheme() {
