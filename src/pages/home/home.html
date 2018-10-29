@@ -4,14 +4,14 @@
 </ion-header> -->
 
 <ion-content no-padding>
-  <div (click)="savedThemes()" style="background-color:#d3d3d3;z-index: 6;color:white;position:fixed;left:20px;top:0px;padding:10px;">saved themes
+  <div (click)="savedThemes()" style="background-color:#8bb2c6;z-index: 6;color:white;position:fixed;left:20px;top:0px;padding:10px;">saved themes
   </div>
   <ion-grid class="vertical-align-content" style="padding:0px;">
 
 
     <ion-row style="width:100%; text-align:center; padding-top:20px;height:15vh;margin:5px;font-style: italic;">
-      <ion-col col-12 style="padding:20px;font-size:140%;">
-        choose a category
+      <ion-col col-12 style="padding:15px;padding-top:30px;">
+        <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">choose a category</span>
       </ion-col>
     </ion-row>
         <!-- <ion-col col-3></ion-col> -->
@@ -21,7 +21,7 @@
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/summer.png')"><img  src="assets/imgs/summer.png"></ion-col>
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/fall.png')"><img  src="assets/imgs/fall.png"></ion-col>
     </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
+    <ion-row style="height:5vh; margin-bottom:15px;font-size:80%;">
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/natural.png')">natural<br><br></ion-col>
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/summer.png')">summer<br><br></ion-col>
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/fall.png')">fall<br><br></ion-col>
@@ -31,7 +31,7 @@
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/warm.png')"><img  src="assets/imgs/warm.png"></ion-col>
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/sophisticated.png')"><img  src="assets/imgs/sophisticated.png"></ion-col>
     </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
+    <ion-row style="height:5vh; margin-bottom:15px;font-size:80%;">
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/tech.png')">tech<br><br></ion-col>
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/warm.png')">warm<br><br></ion-col>
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/sophisticated.png')">sophisticated<br><br></ion-col>
@@ -41,7 +41,7 @@
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/bold.png')"><img  src="assets/imgs/bold.png"></ion-col>
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/cool.png')"><img  src="assets/imgs/cool.png"></ion-col>
     </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
+    <ion-row style="height:5vh; margin-bottom:15px;font-size:80%;">
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/wellbeing.png')">wellbeing<br><br></ion-col>
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/bold.png')">bold<br><br></ion-col>
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/cool.png')">cool<br><br></ion-col>
@@ -51,7 +51,7 @@
       <ion-col col-4 ><img  src="assets/imgs/random.png"></ion-col>
       <ion-col col-4 (click) = "customThemeChosen()"><img  src="assets/imgs/custom.png"></ion-col>
     </ion-row>
-    <ion-row style="height:5vh; margin-bottom:15px;">
+    <ion-row style="height:5vh; margin-bottom:15px;font-size:80%;">
       <ion-col col-4 (click)="navigateToPalettePage('assets/imgs/rustic.png')">rustic<br><br></ion-col>
       <ion-col col-4>random<br><br></ion-col>
       <ion-col col-4 (click) = "customThemeChosen()">custom<br><br></ion-col>
@@ -60,13 +60,13 @@
     <ion-row id="hometop" style="position: fixed; width:100%; bottom:0px;border-top:1px solid #cecece;vertical-align:top ;">
       <!-- <ion-col col-3></ion-col> -->
 
-      <ion-col col-4 style=" padding:15px;font-size:140%;background-color:#f7f4f4;height:100%;">
+      <ion-col col-4 style=" padding:12px;font-size:140%;background-color:#abbc89;color:#fff;height:100%;">
         category
       </ion-col>
-      <ion-col col-4 style="padding:15px;font-size:140%;background-color: #e8e5e5;height:100%;">
+      <ion-col col-4 style="padding:12px;font-size:140%;background-color: #e8e5e5;height:100%;text-decoration: line-through;">
         colors
       </ion-col>
-      <ion-col col-4 style="padding:15px;font-size:140%;background-color: #e8e5e5;height:100%;">
+      <ion-col col-4 style="padding:12px;font-size:140%;background-color: #e8e5e5;height:100%;text-decoration: line-through;">
         fonts
       </ion-col>
     </ion-row>

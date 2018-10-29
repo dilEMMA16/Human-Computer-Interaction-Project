@@ -1,13 +1,13 @@
 
 
 <ion-content no-padding>
-  <div (click)="navigateToHomePage()" style="background-color:#d3d3d3;z-index: 6;color:white;position:fixed;left:20px;top:0px;padding:10px;">back
+  <div (click)="navigateToHomePage()" style="background-color:#8bb2c6;z-index: 6;color:white;position:fixed;left:20px;top:0px;padding:10px;">back
   </div>
   <ion-grid class="vertical-align-content" style="padding:5px;height:14%;">
 
     <ion-row style="width:100%; text-align:center; padding-top:20px;height:15vh;margin:5px;font-style: italic;">
-      <ion-col col-12 style="padding:20px;font-size:140%;">
-        your saved themes
+      <ion-col col-12 style="padding:15px;padding-top:30px;">
+        <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">your saved themes</span>
       </ion-col>
     </ion-row>
 
@@ -44,7 +44,7 @@
                   <div class=tear [style.background-color]="t.color4"></div>
                 </ion-col>
               </ion-row><br><br>
-              <ion-row>
+              <ion-row style="font-size: 80%;">
                 <ion-col class="col col-3">{{t.color1}}</ion-col>
                 <ion-col class="col col-3">{{t.color2}}</ion-col>
                 <ion-col class="col col-3">{{t.color3}}</ion-col>
