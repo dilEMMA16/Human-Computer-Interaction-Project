@@ -99,6 +99,10 @@ page-email {
   align-content: flex-end!important;
 }
 
+div.item-inner:focus, div.item-inner {
+  border-bottom-color:#abbc89 !important;
+  box-shadow: inset 0 -1px 0 0 #abbc89 !important;
+}
 
 
 
