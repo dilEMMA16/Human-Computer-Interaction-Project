@@ -3,7 +3,9 @@ import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 import { CustomPalettePage} from "../custompalette/custompalette";
 import { EmailComposer } from '@ionic-native/email-composer';
-
+import { HomePage} from "../home/home";
+import { SavedPage} from "../saved/saved";
+import { SaveThemeProvider } from './../../providers/save-theme/save-theme';
 @Component({
   selector: 'page-email',
   templateUrl: 'email.html'
@@ -16,17 +18,22 @@ export class EmailPage {
   color4: any;
   email: any;
   theme: any;
+  font1:any;
+  font2:any;
+  themeName: any;
 
 
 
-  constructor(public navCtrl: NavController, public navParams : NavParams,private emailComposer: EmailComposer) {
+  constructor(public navCtrl: NavController, public navParams : NavParams,private emailComposer: EmailComposer,public saveThemeProvider: SaveThemeProvider) {
     this.color1 = navParams.get('color1');
     this.color2 = navParams.get('color2');
     this.color3 = navParams.get('color3');
     this.color4 = navParams.get('color4');
     this.email = "";
-    this.theme = navParams.get('theme');
-
+    this.theme = "assets/imgs/"+navParams.get('data')+".png";
+    this.font1 = "Calibri";
+    this.font2 = "Times New Roman";
+    this.themeName = "";
   }
 
   navigateToHomePage() {
@@ -39,7 +46,45 @@ export class EmailPage {
 
   }
 
+  savedThemes():void{
+    this.navCtrl.push(SavedPage, {
+      dummy:"dummy",
+      dummy2:"dummy2"
+    });
 
+  }
+
+  startNewTheme():void{
+    // this.navCtrl.push(HomePage, {
+    //   dummy:"dummy",
+    //   dummy2:"dummy2"
+    // });
+    this.navCtrl.popToRoot();
+  }
+
+  triggerSaveTheme() {
+
+    let element: HTMLElement = document.getElementById("saveThemeCard");
+      element.style.display = "block";
+    let saveButton: HTMLElement = document.getElementById("saveButton");
+    let themeNameInput: HTMLElement = document.getElementById("themeNameInput");
+
+      saveButton.style.display = "block";
+      themeNameInput.style.display = "block";
+
+
+  }
+
+
+    saveTheme() {
+      console.log(this.themeName);
+      let element: HTMLElement = document.getElementById("inputofname");
+      element.style.backgroundColor = "#e8f7ca";
+      element.style.color = "#abbc89";
+      element.innerHTML = "your theme " + this.themeName + " was saved successfully!";
+      this.saveThemeProvider.saveTheme(this.themeName,this.color1,this.color2,this.color3,this.color4,this.font1,this.font2);
+      console.log(this.saveThemeProvider.getAllSavedThemesArray());
+    }
 
 
 

@@ -19,13 +19,14 @@ page-home {
   border: 1px solid #9c9c9c;
   //background: #38a9e4;
   color: #9c9c9c;
-  font-family: 'Josefin Slab', serif;
+  //font-family: 'Josefin Slab', serif;
   font-size:100%;
   text-align: center;
 }
 
     ion-content {
-      font-family: 'Josefin Slab', serif;
+      //font-family: 'Josefin Slab', serif;
+      font-family: 'Montserrat', sans-serif;
       color: #9c9c9c !important;
     }
 
@@ -43,7 +44,30 @@ page-home {
     }
 
     #hometop {
-      height: 30vh;
+      height: 8vh;
+      // margin-bottom: 7vh;
+    }
+
+    .progress-outer {
+        width: 86%;
+        margin: 10px 2;
+        margin-left:auto;
+        margin-right: auto;
+        padding: 3px;
+        text-align: center;
+        background-color: #f4f4f4;
+        border: 1px solid #dcdcdc;
+        color: #fff;
+        border-radius: 20px;
+    }
+
+    .progress-inner {
+        min-width: 5%;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 5px;
+        border-radius: 20px;
+        background-color:gray;
     }
 
     img {

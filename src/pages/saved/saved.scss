@@ -1,18 +1,17 @@
 
-page-palette {
+page-saved {
 
     ion-grid {
       height: 100%;
     }
 
     ion-row {
-      height: 18%;
+      height: 10%;
       text-align: center !important;
     }
 
     ion-content {
       font-family: 'Montserrat', sans-serif;
-      //font-family: 'Josefin Slab', serif;
       color: #9c9c9c !important;
       font-size: 100%; //was 140%
       text-align: center;
@@ -50,8 +49,25 @@ page-palette {
       height: 30px;
     }
 
+    #email {
+      color:#cecece;font-size:80%;
+    }
+
+    .gray {
+      color:#cecece;
+    }
+
+    #savedDiv {
+      height:47vh;margin-bottom:5vh;background-color: #f7f4f4;padding-top:15px;
+    }
+
+    #delete {
+      color:#f7a0a0;font-size:80%;
+    }
+
     .tear {
       display: inline-block;
+      display:inline-block !important;
       transform: rotate(-45deg);
       background-color: green;
       width: 30px;
@@ -62,6 +78,19 @@ page-palette {
     }
 
 
+        .tear3 {
+          display: inline;
+          transform: rotate(135deg);
+          background-color: green;
+          width: 14px;
+          //margin: 30px;
+          height: 14px;
+          border-top-left-radius: 50%;
+          border-bottom-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+          color: white;
+          text-align: center;
+        }
 
     .vertical-align-content > *
 {

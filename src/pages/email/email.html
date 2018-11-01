@@ -1,6 +1,6 @@
-<ion-header>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</ion-header>
+
 
 <script>
 var emailDoc = version.document || version.contentDocument;
@@ -8,10 +8,11 @@ var emailDoc = version.document || version.contentDocument;
 currentEmail = versionDoc.getElementById("selectedEmail").value;
 </script>
 
-<ion-content padding>
-
-  <ion-grid class="vertical-align-content">
-    <ion-row style="position:relative;">
+<ion-content no-padding>
+  <div (click)="savedThemes()" style="background-color:#8bb2c6;color:white;z-index: 6;position:fixed;left:20px;top:0px;padding:10px;">saved themes
+  </div>
+  <ion-grid class="vertical-align-content" style="padding:0px;">
+    <!-- <ion-row style="position:relative;">
 
       <ion-col col-3></ion-col>
       <ion-col col-2>
@@ -25,12 +26,36 @@ currentEmail = versionDoc.getElementById("selectedEmail").value;
       </ion-col>
       <ion-col col-3></ion-col>
       <div  style="width:100%; height:9vh; text-align:center; padding-top: 20px; font-size:140%">your selections</div>
+    </ion-row> -->
+    <ion-row style="width:100%; text-align:center; padding-top:20px;height:15vh;margin:5px;font-style: italic;">
+      <ion-col col-12 style="padding:15px;padding-top:30px;">
+        <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">your selected theme</span>
+      </ion-col>
     </ion-row>
-    <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:10px;">colors</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:31px;">colors</ion-col>
     </ion-row>
     <ion-row>
+      <ion-col class="col col-3">
+        <div class="tear" [style.background-color]="color1" style="display:inline-block !important;"></div>
+      </ion-col>
+      <ion-col class="col col-3">
+        <div class="tear" [style.background-color]="color2" style="display:inline-block !important;"></div>
+      </ion-col>
+      <ion-col class="col col-3">
+        <div class="tear" [style.background-color]="color3" style="display:inline-block !important;"></div>
+      </ion-col>
+      <ion-col class="col col-3">
+        <div class="tear" [style.background-color]="color4" style="display:inline-block !important;"></div>
+      </ion-col>
+    </ion-row><br>
+    <ion-row style="font-size: 80%;">
+      <ion-col class="col col-3" >{{color1}}</ion-col>
+      <ion-col class="col col-3">{{color2}}</ion-col>
+      <ion-col class="col col-3">{{color3}}</ion-col>
+      <ion-col class="col col-3">{{color4}}</ion-col>
+    </ion-row>
+    <!-- <ion-row>
       <ion-col class = "col col-6">
           <div class="tear summary" [id]="color1" [style.background-color]="color1" style="display:inline-block !important;margin:10px;"></div>
           <br>{{color1}}
@@ -49,15 +74,47 @@ currentEmail = versionDoc.getElementById("selectedEmail").value;
           <div class="tear summary" [id]="color4" [style.background-color]="color4" style="display:inline-block !important;margin:10px;"></div>
             <br>{{color4}}
       </ion-col>
-    </ion-row>
+    </ion-row> -->
     <br><br>
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 2px solid #cecece; padding-bottom: 10px;margin-bottom:10px;">fonts</ion-col>
+      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:10px;">fonts</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="col col-12" style="text-align:center;"><h1>font 1</h1></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="col col-12" style="text-align:center;"><h2>font 2</h2></ion-col>
     </ion-row>
     <br><br>
 
-    <button block (click)="sendEmail()" style= "width: 100%; height: 10vh; background-color: #cecece; color: white; text-align:center; padding-right: auto; padding-left: auto;">email the css code</button>
+        <button  (click)="sendEmail()" style= "font-size: 140%;width: 100%; height: 6vh; background-color: #c4bb6f; color: white; text-align:center; padding-left:26%;">email the css code</button>
+        <button   (click)="triggerSaveTheme()" style= "width: 100%; font-size: 140%;height: 6vh; background-color: #8bb2c6; color: white;padding-left:29%;">save your theme</button>
+        <div id=saveThemeCard style="display:none !important;padding:30px;">
+          <ion-item id=themeNameInput style="margin-right:5px;">
+            <!-- <ion-label floating>Name your theme ...</ion-label> -->
+            <ion-input id=inputofname placeholder="name your theme..." type="text" [(ngModel)]="themeName" style="width:45%;"></ion-input>
+          </ion-item>
+          <button ion-button full  style= "width:25vw;background-color:#abbc89;color:white;" id="saveButton" (click)="saveTheme()">save</button>
+        </div>
+        <button  (click)="startNewTheme()" style= "width: 100%; font-size: 140%;height: 6vh; background-color: #a09f9f; color: white;padding-left:29%;">start new theme</button>
 
+
+    <ion-row id="hometop" style="position:  !important; width:100%; bottom:0px;vertical-align:top ;border-top:1px solid #d3d3d3 !important;">
+      <!-- <ion-col col-3></ion-col> -->
+
+      <ion-col col-4 (click)="navigateToHomePage()" style=" height:100%;padding:15px;padding-top:13px;padding-bottom:3px;font-size:140%;background-color: #f7f4f4;border-bottom:10px solid #abbc89;">
+        <img style="height:20px;width:20px;"id=chosenTheme [src]= "theme">
+      </ion-col>
+      <ion-col col-4 (click)="navigateToPalletePage()" style="height:100%;padding:10px;font-size:140%;background-color: #f7f4f4;border-bottom:10px solid #c1775d;">
+        <div class="tear3" [style.background-color]="color1" style="display:inline-block !important;"></div>
+        <div class="tear3" [style.background-color]="color2" style="display:inline-block !important;"></div>
+        <div class="tear3" [style.background-color]="color3" style="display:inline-block !important;"></div>
+        <div class="tear3" [style.background-color]="color4" style="display:inline-block !important;"></div>
+      </ion-col>
+      <ion-col col-4 style="padding:12px;font-size:140%;background-color: #f7f4f4;height:100%;border-bottom:10px solid #c4bb6f;">
+        fonts
+      </ion-col>
+    </ion-row>
 
 
   </ion-grid>

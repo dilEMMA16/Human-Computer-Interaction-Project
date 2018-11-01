@@ -10,7 +10,9 @@ import { PalettePage } from '../pages/palette/palette';
 import { CustomPalettePage } from '../pages/custompalette/custompalette';
 import { EmailPage } from '../pages/email/email';
 import { FontPage } from '../pages/font/font';
-
+import { SavedPage } from '../pages/saved/saved';
+import { SaveThemeProvider } from '../providers/save-theme/save-theme';
+import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
   declarations: [
     MyApp,
@@ -18,11 +20,13 @@ import { FontPage } from '../pages/font/font';
     PalettePage,
     CustomPalettePage,
     EmailPage,
-    FontPage
+    FontPage,
+    SavedPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,11 +35,13 @@ import { FontPage } from '../pages/font/font';
     PalettePage,
     CustomPalettePage,
     EmailPage,
-    FontPage
+    FontPage,
+    SavedPage
   ],
   providers: [
     StatusBar,
     EmailComposer,
+    SaveThemeProvider,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

@@ -3,7 +3,8 @@ import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 import { IonicPage } from 'ionic-angular';
 import { HomePage} from "../home/home";
-
+import { FontPage} from "../font/font";
+import { SavedPage} from "../saved/saved";
 @Component({
   selector: 'page-palette',
   templateUrl: 'palette.html'
@@ -25,10 +26,27 @@ export class PalettePage {
     this.p3 = navParams.get('palette3');
     this.p4 = navParams.get('palette4');
   }
+  savedThemes():void{
+    this.navCtrl.push(SavedPage, {
+      dummy:"dummy",
+      dummy2:"dummy2"
+    });
 
+  }
 
   navigateToHomePage() {
       this.navCtrl.pop();
+  }
+
+  navigateToFontPage(chosenPalette) {
+    this.navCtrl.push(FontPage, {
+      'data' : this.theme,
+      'color1' : chosenPalette[0],
+       'color2' : chosenPalette[1],
+       'color3' : chosenPalette[2],
+       'color4' : chosenPalette[3]
+
+    });
   }
 
 

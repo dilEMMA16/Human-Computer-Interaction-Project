@@ -22,10 +22,13 @@ page-email {
   font-size:100%;
   text-align: center;
 }
-
+#hometop {
+  height: 8vh;
+  // margin-bottom: 7vh;
+}
     ion-content {
-      font-family: 'Josefin Slab', serif;
-      color: #9c9c9c !important;
+      font-family: 'Montserrat', sans-serif;
+        color: #9c9c9c !important;
     }
 
     h1 {
@@ -56,8 +59,8 @@ page-email {
       display: inline-block;
       transform: rotate(-45deg);
       background-color: green;
-      width: 50px;
-      height: 50px;
+      width: 30px;
+      height: 30px;
       border-top-left-radius: 50%;
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
@@ -65,13 +68,13 @@ page-email {
       text-align: center;
     }
 
-    .tear2 {
-      display: inline-block;
+    .tear3 {
+      display: inline;
       transform: rotate(135deg);
       background-color: green;
-      width: 20px;
-      margin: 30px;
-      height: 20px;
+      width: 14px;
+      //margin: 30px;
+      height: 14px;
       border-top-left-radius: 50%;
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
@@ -96,6 +99,10 @@ page-email {
   align-content: flex-end!important;
 }
 
+div.item-inner:focus, div.item-inner {
+  border-bottom-color:#abbc89 !important;
+  box-shadow: inset 0 -1px 0 0 #abbc89 !important;
+}
 
 
 

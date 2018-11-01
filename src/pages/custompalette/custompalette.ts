@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 import { EmailPage} from "../email/email";
+import { SavedPage} from "../saved/saved";
 @Component({
   selector: 'page-custompalette',
   templateUrl: 'custompalette.html'
@@ -71,6 +72,13 @@ export class CustomPalettePage {
 
   }
 
+  savedThemes():void{
+    this.navCtrl.push(SavedPage, {
+      dummy:"dummy",
+      dummy2:"dummy2"
+    });
+
+  }
 
   selectColor(colorcode)  {
 
@@ -106,7 +114,10 @@ export class CustomPalettePage {
         number++;
       }
 
-
+      //if length == 4 ---> go to font page
+      if (this.chosenColors.length == 4) {
+        this.navigateToEmailPage();
+    }
       //return
       return
     }
