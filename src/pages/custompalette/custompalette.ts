@@ -21,7 +21,8 @@ export class CustomPalettePage {
   pinks: any;
   grays: any;
   chosenColors: any;
-
+  headerfonts: any;
+  bodyfonts : any;
 
   constructor(public navCtrl: NavController, public navParams : NavParams) {
     this.reds = navParams.get('reds');
@@ -35,6 +36,8 @@ export class CustomPalettePage {
     this.pinks = navParams.get('pinks');
     this.grays = navParams.get('grays');
     this.chosenColors = new Array();
+    this.headerfonts = navParams.get('headerfonts');
+    this.bodyfonts = navParams.get('bodyfonts');
 
   }
 
@@ -52,7 +55,9 @@ export class CustomPalettePage {
       'font1' : "Calibri",
       'font2' : "Times New Roman",
       'font1code' :'Calibri',
-      'font2code' : 'Times New Roman'
+      'font2code' : 'Times New Roman',
+      'headerfonts' : this.headerfonts,
+      'bodyfonts' : this.bodyfonts
 
     });
   }

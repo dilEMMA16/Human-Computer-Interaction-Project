@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { RandomEmailPage } from '../pages/randomemail/randomemail';
 import { PalettePage } from '../pages/palette/palette';
 import { CustomPalettePage } from '../pages/custompalette/custompalette';
 import { EmailPage } from '../pages/email/email';
@@ -23,7 +24,8 @@ import { IonicStorageModule } from '@ionic/storage';
     EmailPage,
     FontPage,
     SavedPage,
-    CustomFontPage
+    CustomFontPage,
+    RandomEmailPage
 
   ],
   imports: [
@@ -40,7 +42,8 @@ import { IonicStorageModule } from '@ionic/storage';
     EmailPage,
     FontPage,
     SavedPage,
-    CustomFontPage
+    CustomFontPage,
+    RandomEmailPage
   ],
   providers: [
     StatusBar,

@@ -19,13 +19,17 @@ export class CustomFontPage {
   font2: any;
   font1code: any;
   font2code: any;
-  
+  headerfonts: any;
+  bodyfonts: any;
+
   constructor(public navCtrl: NavController,public navParams : NavParams) {
     this.color1 = navParams.get('color1');
     this.color2 = navParams.get('color2');
     this.color3 = navParams.get('color3');
     this.color4 = navParams.get('color4');
     this.theme = ""+navParams.get('data')+"";
+    this.headerfonts = navParams.get('headerfonts');
+    this.bodyfonts = navParams.get('bodyfonts');
   }
 
   navigateToHomePage() {
