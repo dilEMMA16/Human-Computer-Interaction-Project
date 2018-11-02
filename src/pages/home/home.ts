@@ -36,7 +36,6 @@ export class HomePage {
     var grays = ["#c5bde1","#a8a8a8","#78787b"]
 
 
-
     this.navCtrl.push(CustomPalettePage, {
       'blues' : blues,
        'browns' : browns,
@@ -47,7 +46,8 @@ export class HomePage {
        'oranges' : oranges,
        'reds' : reds,
        'pinks' : pinks,
-       'grays' : grays
+       'grays' : grays,
+       'theme': 'assets/imgs/custom.png'
 
     });
 
