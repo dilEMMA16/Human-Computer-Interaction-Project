@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 import { EmailPage} from "../email/email";
 import { SavedPage} from "../saved/saved";
+import { CustomFontPage} from "../customfont/customfont";
 @Component({
   selector: 'page-custompalette',
   templateUrl: 'custompalette.html'
@@ -41,6 +42,21 @@ export class CustomPalettePage {
       this.navCtrl.pop();
   }
 
+  navigateToCustomFontPage() {
+    this.navCtrl.push(CustomFontPage, {
+      'data' : 'assets/imgs/custom.png',
+      'color1' : this.chosenColors[0],
+      'color2' : this.chosenColors[1],
+      'color3' : this.chosenColors[2],
+      'color4' : this.chosenColors[3],
+      'font1' : "Calibri",
+      'font2' : "Times New Roman",
+      'font1code' :'Calibri',
+      'font2code' : 'Times New Roman'
+
+    });
+  }
+
   navigateToEmailPage() {
 
     // //reset selections
@@ -62,11 +78,15 @@ export class CustomPalettePage {
     // }
 
     this.navCtrl.push(EmailPage, {
-      'data' : 'custom',
+      'data' : 'assets/imgs/custom.png',
       'color1' : this.chosenColors[0],
       'color2' : this.chosenColors[1],
       'color3' : this.chosenColors[2],
       'color4' : this.chosenColors[3],
+      'font1' : "Calibri",
+      'font2' : "Times New Roman",
+      'font1code' :'Calibri',
+      'font2code' : 'Times New Roman'
 
     });
 
@@ -116,7 +136,7 @@ export class CustomPalettePage {
 
       //if length == 4 ---> go to font page
       if (this.chosenColors.length == 4) {
-        this.navigateToEmailPage();
+        this.navigateToCustomFontPage();
     }
       //return
       return
@@ -157,7 +177,7 @@ export class CustomPalettePage {
 
     //if length == 4 ---> go to font page
     if (this.chosenColors.length == 4) {
-      this.navigateToEmailPage();
+      this.navigateToCustomFontPage();
   }
 
 

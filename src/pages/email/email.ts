@@ -5,6 +5,7 @@ import { CustomPalettePage} from "../custompalette/custompalette";
 import { EmailComposer } from '@ionic-native/email-composer';
 import { HomePage} from "../home/home";
 import { SavedPage} from "../saved/saved";
+import { FontPage} from "../font/font";
 import { SaveThemeProvider } from './../../providers/save-theme/save-theme';
 @Component({
   selector: 'page-email',
@@ -20,6 +21,8 @@ export class EmailPage {
   theme: any;
   font1:any;
   font2:any;
+  font1code:any;
+  font2code:any;
   themeName: any;
 
 
@@ -30,20 +33,28 @@ export class EmailPage {
     this.color3 = navParams.get('color3');
     this.color4 = navParams.get('color4');
     this.email = "";
-    this.theme = "assets/imgs/"+navParams.get('data')+".png";
-    this.font1 = "Calibri";
-    this.font2 = "Times New Roman";
+    this.theme = navParams.get('data');
+    this.font1 = navParams.get('font1');
+    this.font2 = navParams.get('font2');
+    this.font1code = navParams.get('font1code');
+    this.font2code = navParams.get('font2code');
     this.themeName = "";
   }
 
   navigateToHomePage() {
       this.navCtrl.pop();
       this.navCtrl.pop();
+      this.navCtrl.pop();
   }
 
   navigateToPalletePage() {
     this.navCtrl.pop();
+    this.navCtrl.pop();
 
+  }
+
+  navigateToFontPage() {
+    this.navCtrl.pop();
   }
 
   savedThemes():void{

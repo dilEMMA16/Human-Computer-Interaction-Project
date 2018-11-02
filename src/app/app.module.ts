@@ -11,6 +11,7 @@ import { CustomPalettePage } from '../pages/custompalette/custompalette';
 import { EmailPage } from '../pages/email/email';
 import { FontPage } from '../pages/font/font';
 import { SavedPage } from '../pages/saved/saved';
+import { CustomFontPage } from '../pages/customfont/customfont';
 import { SaveThemeProvider } from '../providers/save-theme/save-theme';
 import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
@@ -21,7 +22,9 @@ import { IonicStorageModule } from '@ionic/storage';
     CustomPalettePage,
     EmailPage,
     FontPage,
-    SavedPage
+    SavedPage,
+    CustomFontPage
+
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { IonicStorageModule } from '@ionic/storage';
     CustomPalettePage,
     EmailPage,
     FontPage,
-    SavedPage
+    SavedPage,
+    CustomFontPage
   ],
   providers: [
     StatusBar,
