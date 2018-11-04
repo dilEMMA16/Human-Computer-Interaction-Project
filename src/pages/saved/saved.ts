@@ -45,9 +45,25 @@ savedThemes: any;
   // }
 
   emailTheme(theme){
+    //  let el: HTMLElement = document.getElementById("selectedEmail");
+    //replace all spaces in font names with a +
+      var replaced1 = theme.font1.split(' ').join('+');
+      var replaced2 = theme.font2.split(' ').join('+');
 
-        //let emailContent = color1 + " " + color2 + " " + color3 + " " + color4;
-        let emailContent = "//put in css file:<br>:root{<br>--color-one:" + theme.color1 +";<br>--color-two:" + theme.color2 +";<br>--color-three:" + theme.color3 + ";<br>--color-four:" + theme.color4 + ";<br>}<br>//to use these css variables =   background-color: var(--color-one);"
+
+      var importLink1 = "//put in FIRST line of css file <br>  @import url('https://fonts.googleapis.com/css?family=" + replaced1 + "');<br><br>";
+      var importLink2 = "//put in SECOND line of css file <br>  @import url('https://fonts.googleapis.com/css?family=" + replaced2 + "');<br><br>";
+
+      // var elementstyle1 = " //use for html element tags <br> style='font-family:" + this.font1code + ";'";
+      // var elementstyle2 = " //use for html element tags <br> style='font-family:" + this.font2code + ";'";
+
+      var cssstyle1 = " //put in css file <br> h1,h2,h3,h4,h5,h6 {font-family:" + theme.font1code + ";}";
+      var cssstyle2 = " //put in css file <br> p {font-family:" + theme.font2code + ";}";
+      //let emailContent = color1 + " " + color2 + " " + color3 + " " + color4;
+      let emailContent = "COLORS:<br>//put in css file:<br>:root{<br>--color-one:" + theme.color1 +";<br>--color-two:" + theme.color2 +";<br>--color-three:" + theme.color3 + ";<br>--color-four:" + theme.color4 + ";<br>}<br>//to use these css variables =   background-color: var(--color-one);<br><br>FONTS:<br>" + importLink1 + "<br>" + importLink2 + "<br>" + cssstyle1 + "<br>" + cssstyle2;
+
+      //<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" /> put in header html
+      //style="font-family:{{font2code}};" use for element
 
         let email = {
           to: '',
