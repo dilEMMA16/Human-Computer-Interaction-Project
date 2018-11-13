@@ -35,7 +35,7 @@ currentEmail = versionDoc.getElementById("selectedEmail").value;
     <ion-row >
       <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:31px;">colors</ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row style="    padding: 0 15px;">
       <ion-col class="col col-3">
         <div class="tear" [style.background-color]="color1" style="display:inline-block !important;"></div>
       </ion-col>
@@ -49,7 +49,7 @@ currentEmail = versionDoc.getElementById("selectedEmail").value;
         <div class="tear" [style.background-color]="color4" style="display:inline-block !important;"></div>
       </ion-col>
     </ion-row><br>
-    <ion-row style="font-size: 80%;">
+    <ion-row style="font-size: 80%;    padding: 0 15px;">
       <ion-col class="col col-3" >{{color1}}</ion-col>
       <ion-col class="col col-3">{{color2}}</ion-col>
       <ion-col class="col col-3">{{color3}}</ion-col>
@@ -76,11 +76,11 @@ currentEmail = versionDoc.getElementById("selectedEmail").value;
       </ion-col>
     </ion-row> -->
     <br><br>
-    <ion-row >
+    <ion-row style="margin:8px;">
       <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 15px;margin-bottom:10px;">fonts</ion-col>
     </ion-row>
     <ion-row>
-      <ion-col class="col col-12"[style.font-family]=font1code style="text-align:center;font-size:1.75em;padding:0px !important;"><h1>{{font1}}</h1></ion-col>
+      <ion-col class="col col-12"[style.font-family]=font1code style="text-align:center;font-size:1.75em;padding:0px !important;"><h1 style="margin-bottom: 0.6rem;">{{font1}}</h1></ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="col col-12" [style.font-family]=font2code  style="text-align:center;font-size:1em;padding:0px !important;"><h2>{{font2}}</h2></ion-col>
@@ -92,7 +92,7 @@ currentEmail = versionDoc.getElementById("selectedEmail").value;
         <div id=saveThemeCard style="display:none !important;padding:30px;">
           <ion-item id=themeNameInput style="margin-right:5px;">
             <!-- <ion-label floating>Name your theme ...</ion-label> -->
-            <ion-input id=inputofname placeholder="name your theme..." type="text" [(ngModel)]="themeName" style="width:45%;"></ion-input>
+            <ion-input id=inputofname placeholder="name your theme..." type="text" [(ngModel)]="themeName" style="width:45%; color: #9c9c9c !important;"></ion-input>
           </ion-item>
           <button ion-button full  style= "width:25vw;background-color:#abbc89;color:white;" id="saveButton" (click)="saveTheme()">save</button>
         </div>

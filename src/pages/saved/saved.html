@@ -10,7 +10,7 @@
         <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">your saved themes</span>
       </ion-col>
     </ion-row>
-
+<br>
     <!-- <ion-row *ngFor="let theme of savedThemes; let i = index" >
         <ion-col col-11>
           <button ion-button block style="height:8.6rem;"  >
@@ -30,7 +30,7 @@
         <button color=light id=delete ion-button clear (click)="deleteTheme(i)">delete</button>
         <br><br>
             <ion-grid>
-              <ion-row>
+              <ion-row style="    padding: 0 15px;">
                 <ion-col class="col col-3">
                   <div class=tear [style.background-color]="t.color1"></div>
                 </ion-col>
@@ -44,7 +44,7 @@
                   <div class=tear [style.background-color]="t.color4"></div>
                 </ion-col>
               </ion-row><br><br>
-              <ion-row style="font-size: 80%;">
+              <ion-row style="font-size: 80%;    padding: 0 15px;">
                 <ion-col class="col col-3">{{t.color1}}</ion-col>
                 <ion-col class="col col-3">{{t.color2}}</ion-col>
                 <ion-col class="col col-3">{{t.color3}}</ion-col>
