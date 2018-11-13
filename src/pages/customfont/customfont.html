@@ -5,19 +5,59 @@
   <div (click)="savedThemes()" style="background-color:#8bb2c6;color:white;z-index: 6;position:fixed;left:20px;top:0px;padding:10px;">saved themes
   </div>
   <ion-grid style="padding:0px;">
-    <ion-row id="hometop" style="position: fixed; width:100%; bottom:0px;vertical-align:top ;border-top:1px solid #d3d3d3 !important;">
+    
+	<ion-row style="width:100%; text-align:center; padding:5px;padding-top:20px;height:15vh;margin:5px;font-style: italic;">
+          <ion-col col-12 style="padding:15px;padding-top:30px;">
+            <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">choose custom fonts</span>
+          </ion-col>
+        </ion-row>
+		
+		
+		
+		
+		<button  (click)="showheaderDiv()" style= "font-size: 140%;width: 100%; height: auto; background-color: #55707b; padding-top: 5vh; padding-bottom: 5vh; color: white; text-align:center; padding-left:6%;">select header font</button>
+		<div id = headerDiv style = " display: none; padding-bottom:10px; height: auto; ">
+			<ion-row *ngFor ="let font of headerfonts" (click)="headerfontClicked(font)" [id] = "font[0]" [style.font-family]= "font[1]"style= "text-align: center; border-bottom:1px solid #cecece;padding-bottom:10px; padding-top:10px; font-size:1.2em; height: auto; ">
+			<h1 style= "text-align: center; padding: 5px; margin-right: auto; margin-left:auto  ">
+			{{font[0]}}</h1>
+			</ion-row>
+		</div>
+		
+		<div id = showclickedheaderDiv style = " text-align: center; border-bottom:1px solid #cecece;padding-bottom:20px; padding-top:20px; font-size:1.5em; height: auto; display: none; height: auto; ">
+			
+		</div>
+		
+		
+		
+	  <button   (click)="showbodyDiv()" style= "width: 100%; font-size: 140%;height: auto; background-color: #8bb2c6; padding-top: 5vh; padding-bottom: 5vh; color: white;padding-left:6%;">select body font</button>
+	  <div id = bodyDiv style = " display: none; padding-bottom:10px; height: auto; ">
+			<ion-row *ngFor ="let font of bodyfonts" (click)="bodyfontClicked(font)"  [id] = "font[0]" [style.font-family]= "font[1]"style= "text-align: center; border-bottom:1px solid #cecece;padding-bottom:10px; padding-top:10px; font-size:1.2em; height: auto; ">
+			<h1 style= "text-align: center; padding: 5px; margin-right: auto; margin-left:auto ">
+			{{font[0]}}</h1>
+			</ion-row>
+		</div>
+		
+		<div id = showclickedbodyDiv style = " text-align: center; border-bottom:1px solid #cecece;padding-bottom:20px; padding-top:20px; font-size:1.5em; height: auto; display: none;  height: auto; ">
+			
+		</div>
+
+
+<button (click) ="confirm()" style= "width: 100%; font-size: 140%;height: auto; margin-bottom: 10px; padding-top: 5vh; padding-bottom: 5vh;  background-color: #abbc89; color: white;padding-left:6%;"> confirm selections</button>
+
+<div id = confirmError style = "color: red; padding: 15px; text-align:center "> </div>
+    <ion-row id="hometop" style="position: sticky; width:100%; margin-top: 64vh; bottom:0px;vertical-align:top ;border-top:1px solid #d3d3d3 !important;">
       <!-- <ion-col col-3></ion-col> -->
 
       <ion-col col-4 (click)="navigateToHomePage()" style=" padding:15px;padding-top:13px;padding-bottom:3px;font-size:140%;background-color:#f7f4f4;border-bottom:10px solid #abbc89;">
         <img style="height:23px;width:23px;"id=chosenTheme [src]= "theme">
       </ion-col>
-      <ion-col col-4 (click)="navigateToPalletePage()" style="padding:15px;padding-top:10px;font-size:140%;background-color:#f7f4f4;border-bottom:10px solid #c1775d;">
+      <ion-col col-4 (click)="navigateToPalletePage()" style="padding:10px;padding-top:10px;font-size:140%;background-color:#f7f4f4;border-bottom:10px solid #c1775d;">
         <div class="tear3" [style.background-color]="color1" style="display:inline-block !important;"></div>
         <div class="tear3" [style.background-color]="color2" style="display:inline-block !important;"></div>
         <div class="tear3" [style.background-color]="color3" style="display:inline-block !important;"></div>
         <div class="tear3" [style.background-color]="color4" style="display:inline-block !important;"></div>
       </ion-col>
-      <ion-col col-4 style="padding:12px;font-size:140%;background-color:#c4bb6f;color:white;">
+      <ion-col col-4 style="padding:12px;font-size:140%;height:100%;background-color:#c4bb6f;color:white;">
         fonts
       </ion-col>
     </ion-row>
