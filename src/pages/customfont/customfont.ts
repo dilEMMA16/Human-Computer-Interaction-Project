@@ -52,10 +52,10 @@ export class CustomFontPage {
         //remove classes
         element.classList.remove("opened");
       }
-    let element: HTMLElement = document.getElementById("bodyDiv");
-      if (element.classList.contains("opened")) {
+    let element2: HTMLElement = document.getElementById("bodyDiv");
+      if (element2.classList.contains("opened")) {
           //remove classes
-          element.classList.remove("opened");
+          element2.classList.remove("opened");
         }
     this.navCtrl.push(SavedPage, {
       dummy:"dummy",
@@ -68,7 +68,7 @@ showheaderDiv():void{
 	let element: HTMLElement = document.getElementById("headerDiv");
 	if (element.classList.contains("opened")) {
       //remove classes
-      element.classList.remove("opened");
+    element.classList.remove("opened");
 	  element.style.display = "none";
     if (!this.headerfontisselected){
       let element2: HTMLElement = document.getElementById("headerbutton");
@@ -159,10 +159,10 @@ confirm():void{
         //remove classes
         element.classList.remove("opened");
       }
-    let element: HTMLElement = document.getElementById("bodyDiv");
-      if (element.classList.contains("opened")) {
+    let element2: HTMLElement = document.getElementById("bodyDiv");
+      if (element2.classList.contains("opened")) {
           //remove classes
-          element.classList.remove("opened");
+          element2.classList.remove("opened");
         }
 	this.navCtrl.push(EmailPage, {
       'color1':this.color1,
