@@ -28,8 +28,7 @@ export class PalettePage {
   }
   savedThemes():void{
     this.navCtrl.push(SavedPage, {
-      dummy:"dummy",
-      dummy2:"dummy2"
+      test:"test"
     });
 
   }
@@ -39,7 +38,6 @@ export class PalettePage {
   }
 
   navigateToFontPage(chosenPalette) {
-
     var fontcombo1 = new Array();
     var fontcombo2= new Array();
     var fontcombo3 = new Array();

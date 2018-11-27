@@ -4,38 +4,28 @@
 
 <script>
 var emailDoc = version.document || version.contentDocument;
-// ...and then
 currentEmail = versionDoc.getElementById("selectedEmail").value;
 </script>
 
 <ion-content no-padding>
-  <div (click)="savedThemes()" style="background-color:#abbc89;color:white;z-index: 6;position:fixed;left:20px;top:0px;padding:10px;">saved themes
+
+  <!-- BOOKMARK TO GO TO SAVED THEME PAGE -->
+  <div (click)="savedThemes()" id=savedthemebookmark>saved themes
   </div>
   <ion-grid class="vertical-align-content" style="padding:0px;">
-    <!-- <ion-row style="position:relative;">
 
-      <ion-col col-3></ion-col>
-      <ion-col col-2>
-        <div class="circle" (click)="navigateToHomePage()" style="background-color:#9c9c9c; color:white;">theme</div>
-      </ion-col>
-      <ion-col col-2>
-        <div class="circle" (click)="navigateToPalletePage()" style="background-color:#9c9c9c; color:white;">colors</div>
-      </ion-col>
-      <ion-col col-2>
-        <div class="circle" style="background-color:#9c9c9c; color:white;">fonts</div>
-      </ion-col>
-      <ion-col col-3></ion-col>
-      <div  style="width:100%; height:9vh; text-align:center; padding-top: 20px; font-size:140%">your selections</div>
-    </ion-row> -->
-    <ion-row style="width:100%; text-align:center; padding-top:20px;height:15vh;margin:5px;font-style: italic;">
+    <!-- PAGE INFO -->
+    <ion-row id=instructrow>
       <ion-col col-12 style="padding:15px;padding-top:30px;">
-        <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">your selected theme</span>
+        <span id=instructformat>your selected theme</span>
       </ion-col>
     </ion-row>
+
+    <!-- THEME COLORS -->
     <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:31px;">colors</ion-col>
+      <ion-col class = "col col-12" id=colortitle>colors</ion-col>
     </ion-row>
-    <ion-row style="    padding: 0 15px;">
+    <ion-row style="padding: 0 15px;">
       <ion-col class="col col-3">
         <div class="tear" [style.background-color]="color1" style="display:inline-block !important;"></div>
       </ion-col>
@@ -49,54 +39,38 @@ currentEmail = versionDoc.getElementById("selectedEmail").value;
         <div class="tear" [style.background-color]="color4" style="display:inline-block !important;"></div>
       </ion-col>
     </ion-row><br>
-    <ion-row style="font-size: 80%;    padding: 0 15px;">
+    <ion-row style="font-size: 80%; padding: 0 15px;">
       <ion-col class="col col-3" >{{color1}}</ion-col>
       <ion-col class="col col-3">{{color2}}</ion-col>
       <ion-col class="col col-3">{{color3}}</ion-col>
       <ion-col class="col col-3">{{color4}}</ion-col>
     </ion-row>
-    <!-- <ion-row>
-      <ion-col class = "col col-6">
-          <div class="tear summary" [id]="color1" [style.background-color]="color1" style="display:inline-block !important;margin:10px;"></div>
-          <br>{{color1}}
-      </ion-col>
-      <ion-col class = "col col-6">
-          <div class="tear summary" [id]="color2" [style.background-color]="color2" style="display:inline-block !important;margin:10px;"></div>
-            <br>{{color2}}
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class = "col col-6">
-          <div class="tear summary" [id]="color3" [style.background-color]="color3" style="display:inline-block !important;margin:10px;"></div>
-            <br>{{color3}}
-      </ion-col>
-      <ion-col class = "col col-6">
-          <div class="tear summary" [id]="color4" [style.background-color]="color4" style="display:inline-block !important;margin:10px;"></div>
-            <br>{{color4}}
-      </ion-col>
-    </ion-row> -->
+
+
+
+    <!-- FONTS FOR THEME -->
     <br><br>
     <ion-row style="margin-bottom:1vh;">
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 15px;margin-bottom:10px;">fonts</ion-col>
+      <ion-col class = "col col-12" id=fonttitle>fonts</ion-col>
     </ion-row>
     <ion-row>
-      <ion-col class="col col-12"[style.font-family]=font1code style="text-align:center;font-size:1.75em;padding:0px !important;"><h1>{{font1}}</h1></ion-col>
+      <ion-col class="col col-12"[style.font-family]=font1code id=head><h1>{{font1}}</h1></ion-col>
     </ion-row>
     <ion-row>
-      <ion-col class="col col-12" [style.font-family]=font2code  style="text-align:center;font-size:1em;padding:0px !important;"><h2>{{font2}}</h2></ion-col>
+      <ion-col class="col col-12" [style.font-family]=font2code id=body><h2>{{font2}}</h2></ion-col>
     </ion-row>
     <br>
-    <button   (click)="triggerSaveTheme()" style= "width: 100%; font-size: 140%;height: 6vh; background-color: #abbc89; color: white;padding-left:29%;">save your theme</button>
-    <div id=saveThemeCard style="display:none !important;padding:20px;">
-      <ion-item id=themeNameInput style="margin-right:5px;">
-        <!-- <ion-label floating>Name your theme ...</ion-label> -->
-        <ion-input id=inputofname placeholder="name your theme..." type="text" [(ngModel)]="themeName" style="width:45%; color: #9c9c9c !important;"></ion-input>
-      </ion-item>
-      <button ion-button full  style= "width:25vw;background-color:#abbc89;color:white;" id="saveButton" (click)="saveTheme()">save</button>
-    </div>
-    <button id=newtheme (click)="startNewTheme()" style= "width: 100%; font-size: 140%;height: 14vh; background-color: #8bb2c6; color: white;padding-left:26%;">back to categories</button>
 
-        <button  (click)="sendEmail()" style= "font-size: 140%;width: 100%; height: 6vh; background-color: #c4bb6f; color: white; text-align:center; padding-left:26%;">email the css code</button>
+    <!-- OPTIONS TO SAVE, START NEW, SEND EMAIL FOR THEME -->
+    <button  (click)="triggerSaveTheme()" id=triggersavebutton>save your theme</button>
+    <div id=saveThemeCard>
+      <ion-item id=themeNameInput>
+        <ion-input id=inputofname placeholder="name your theme..." type="text" [(ngModel)]="themeName" ></ion-input>
+      </ion-item>
+      <button ion-button full  id="saveButton" (click)="saveTheme()">save</button>
+    </div>
+    <button id=newtheme (click)="startNewTheme()" >back to categories</button>
+    <button  (click)="sendEmail()" id=emailbutton>email the css code</button>
 
 
 

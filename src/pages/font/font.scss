@@ -19,6 +19,34 @@ page-font {
         text-align: center;
       }
 
+      #formatinstruct {
+        font-family: 'La Belle Aurore', cursive;font-size:180%;
+      }
+
+      .rowforpair {
+        height:13vh;margin-bottom:5px;padding:20px;
+      }
+
+      .fontpairbox  {
+        border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;
+      }
+
+      .head {
+        font-size:1.75em;
+      }
+
+      .body {
+        font-size:1em;
+      }
+
+      .title {
+        font-size:80%;
+      }
+
+      #instructrow {
+        width:100%; text-align:center; padding:5px;padding-top:20px;height:15vh;margin:5px;font-style: italic;
+      }
+
       #savedthemesbookmark {
         background-color:#abbc89;color:white;z-index: 6;position:fixed;left:20px;top:0px;padding:10px;
       }

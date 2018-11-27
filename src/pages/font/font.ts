@@ -79,7 +79,6 @@ export class FontPage {
     this.font5namebody = this.fontcombo5[1];
     this.font5codeheader = this.fontcombo5[2];
     this.font5codebody = this.fontcombo5[3];
-    //font combos = 0 --> header name, 1 --> body name, 2 --> header css, 3 --> body css
   }
 
   navigateToHomePage() {
@@ -141,14 +140,13 @@ export class FontPage {
       'font2code':font2code
     });
 
-
-
   }
+
+
 
   savedThemes():void{
     this.navCtrl.push(SavedPage, {
-      dummy:"dummy",
-      dummy2:"dummy2"
+      test:"test"
     });
 
   }

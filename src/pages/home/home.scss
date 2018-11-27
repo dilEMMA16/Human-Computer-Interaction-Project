@@ -1,31 +1,25 @@
 
 page-home {
 
-* {
-  box-sizing: border-box;
-  position: relative;
-}
+    * {
+      box-sizing: border-box;
+      position: relative;
+    }
 
-.circle {
-  position: relative;
-  display: inline-block;
-  //width: 100%;
-//  height: 0;
-  width: 55px; //were 75 with 26 padding font-size 140%
-  height: 55px;
-  //margin: 2vw 5vw;
-  padding: 20px 0;
-  border-radius: 50%;
-  border: 1px solid #9c9c9c;
-  //background: #38a9e4;
-  color: #9c9c9c;
-  //font-family: 'Josefin Slab', serif;
-  font-size:100%;
-  text-align: center;
-}
+    .circle {
+      position: relative;
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+      padding: 20px 0;
+      border-radius: 50%;
+      border: 1px solid #9c9c9c;
+      color: #9c9c9c;
+      font-size:100%;
+      text-align: center;
+    }
 
     ion-content {
-      //font-family: 'Josefin Slab', serif;
       font-family: 'Montserrat', sans-serif;
       color: #9c9c9c !important;
     }
@@ -43,9 +37,21 @@ page-home {
       text-align: center;
     }
 
-    #hometop {
+    #menubottom {
       height: 8vh;
-      // margin-bottom: 7vh;
+      position: fixed; width:100%; bottom:0px;border-top:1px solid #cecece;vertical-align:top ;
+    }
+
+    #categorytab {
+      padding:12px;font-size:140%;background-color:#8bb2c6;color:#fff;height:100%;
+    }
+
+    #fonttab {
+      padding:12px;font-size:140%;background-color: #e8e5e5;height:100%;text-decoration: line-through;
+    }
+
+    #palletetab {
+      padding:12px;font-size:140%;background-color: #e8e5e5;height:100%;text-decoration: line-through;
     }
 
     .progress-outer {
@@ -59,6 +65,26 @@ page-home {
         border: 1px solid #dcdcdc;
         color: #fff;
         border-radius: 20px;
+    }
+
+    #savethemesbookmark {
+      background-color:#abbc89;z-index: 6;color:white;position:fixed;left:20px;top:0px;padding:10px;
+    }
+
+    #instructformat {
+      font-family: 'La Belle Aurore', cursive;font-size:180%;
+    }
+
+    #instructrow {
+      width:100%; text-align:center; padding-top:20px;height:15vh;margin:5px;font-style: italic;
+    }
+
+    .imagerow {
+      margin-bottom:5px;
+    }
+
+    .titlerow {
+      height:5vh; margin-bottom:15px;font-size:80%;
     }
 
     .progress-inner {
@@ -75,8 +101,6 @@ page-home {
       max-height: 90px;
       object-fit: contain;
       overflow: hidden;
-
-
     }
 
     #logo {
@@ -87,22 +111,21 @@ page-home {
       padding: 3px;
     }
 
-    .vertical-align-content > *
-{
+    .vertical-align-content > *{
      display: flex!important;
      align-content: center!important;
      align-items: center!important;
-}
+    }
 
-.align-bottom {
-  align-items: flex-end!important;
-  align-content: flex-end!important;
-}
+    .align-bottom {
+      align-items: flex-end!important;
+      align-content: flex-end!important;
+    }
 
-.themeoptions {
-  width: 100%;
-  height: 100%;
-}
+    .themeoptions {
+      width: 100%;
+      height: 100%;
+    }
 
 
 

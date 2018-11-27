@@ -6,49 +6,49 @@
     </div>
     <ion-grid class="vertical-align-content" style="padding:0px;">
 
-        <ion-row style="width:100%; text-align:center; padding:5px;padding-top:20px;height:15vh;margin:5px;font-style: italic;">
+        <ion-row id=instructrow>
             <ion-col col-12 style="padding:15px;padding-top:30px;">
-                <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">choose a font combo</span>
+                <span id=formatinstruct>choose a font combo</span>
             </ion-col>
         </ion-row>
         <br>
 
-        <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(1)>
-            <ion-col col-2 class = "col" style="font-size:80%;padding-left:5px;">combo #1 </ion-col>
-            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;  border-top: 1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-                <span style="font-size:1.75em;" [style.font-family]=font1codeheader >{{font1nameheader}}</span><br>
-                <span style="font-size:1em;" [style.font-family]=font1codebody >{{font1namebody}}</span>
+        <ion-row class="rowforpair" (click)=navigateToEmailPage(1)>
+            <ion-col col-2 class = "col title" style="padding-left:5px;">combo #1 </ion-col>
+            <ion-col class = "col fontpairbox" col-10 style="border-top: 1px solid #cecece;">
+                <span class="head" [style.font-family]=font1codeheader >{{font1nameheader}}</span><br>
+                <span class="body" [style.font-family]=font1codebody >{{font1namebody}}</span>
             </ion-col>
         </ion-row>
-        <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(2)>
-            <ion-col col-2 class = "col" style="font-size:80%;">combo #2 </ion-col>
-            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-                <span style="font-size:1.75em;" [style.font-family]=font2codeheader >{{font2nameheader}}</span><br>
-                <span style="font-size:1em;" [style.font-family]=font2codebody >{{font2namebody}}</span>
-            </ion-col>
-        </ion-row>
-
-        <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(3)>
-            <ion-col col-2 class = "col" style="font-size:80%;">combo #3 </ion-col>
-            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-                <span style="font-size:1.75em;" [style.font-family]=font3codeheader >{{font3nameheader}}</span><br>
-                <span style="font-size:1em;" [style.font-family]=font3codebody >{{font3namebody}}</span>
+        <ion-row class="rowforpair" (click)=navigateToEmailPage(2)>
+            <ion-col col-2 class = "col title">combo #2 </ion-col>
+            <ion-col class = "col fontpairbox" col-10>
+                <span class="head" [style.font-family]=font2codeheader >{{font2nameheader}}</span><br>
+                <span class="body" [style.font-family]=font2codebody >{{font2namebody}}</span>
             </ion-col>
         </ion-row>
 
-        <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(4)>
-            <ion-col col-2 class = "col" style="font-size:80%;">combo #4 </ion-col>
-            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-                <span style="font-size:1.75em;" [style.font-family]=font4codeheader >{{font4nameheader}}</span><br>
-                <span style="font-size:1em;" [style.font-family]=font4codebody >{{font4namebody}}</span>
+        <ion-row class="rowforpair" (click)=navigateToEmailPage(3)>
+            <ion-col col-2 class = "col title">combo #3 </ion-col>
+            <ion-col class = "col fontpairbox" col-10 >
+                <span class="head" [style.font-family]=font3codeheader >{{font3nameheader}}</span><br>
+                <span class="body" [style.font-family]=font3codebody >{{font3namebody}}</span>
             </ion-col>
         </ion-row>
 
-        <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(5)>
-            <ion-col col-2 class = "col" style="font-size:80%;">combo #5 </ion-col>
-            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-                <span style="font-size:1.75em;" [style.font-family]=font5codeheader >{{font5nameheader}}</span><br>
-                <span style="font-size:1em;" [style.font-family]=font5codebody >{{font5namebody}}</span>
+        <ion-row class="rowforpair" (click)=navigateToEmailPage(4)>
+            <ion-col col-2 class = "col title">combo #4 </ion-col>
+            <ion-col class = "col fontpairbox" col-10 >
+                <span class="head" [style.font-family]=font4codeheader >{{font4nameheader}}</span><br>
+                <span class="body" [style.font-family]=font4codebody >{{font4namebody}}</span>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="rowforpair" (click)=navigateToEmailPage(5)>
+            <ion-col col-2 class = "col title">combo #5 </ion-col>
+            <ion-col class = "col fontpairbox" col-10 >
+                <span class="head" [style.font-family]=font5codeheader >{{font5nameheader}}</span><br>
+                <span class="body" [style.font-family]=font5codebody >{{font5namebody}}</span>
             </ion-col>
         </ion-row>
 

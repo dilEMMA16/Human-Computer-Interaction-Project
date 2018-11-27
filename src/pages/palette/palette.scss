@@ -1,37 +1,50 @@
 
 page-palette {
 
-    ion-grid {
-      height: 100%;
-    }
+        ion-grid {
+          height: 100%;
+        }
 
-    ion-row {
-      height: 18%;
-      text-align: center !important;
-    }
+        ion-row {
+          height: 18%;
+          text-align: center !important;
+        }
 
-    ion-content {
-      font-family: 'Montserrat', sans-serif;
-      //font-family: 'Josefin Slab', serif;
-      color: #9c9c9c !important;
-      font-size: 100%; //was 140%
-      text-align: center;
-    }
+        #savedthemebookmark {
+          background-color:#abbc89;color:white;position:fixed;left:20px;top:0px;padding:10px;z-index:6;
+        }
 
+        #instructrow {
+          width:100%; text-align:center; padding:5px;padding-top:20px;height:15vh;margin:5px;font-style: italic;
+        }
 
+        #formatinstruct {
+          font-family: 'La Belle Aurore', cursive;font-size:180%;
+        }
+
+        .palettebox {
+          font-size:80%;
+        }
+
+        .palettediv {
+          width:21%;border-bottom: 1px solid #cecece; padding:5px;padding-bottom: 10px;padding-top: 33px;font-size:80%;
+        }
+
+        ion-content {
+          font-family: 'Montserrat', sans-serif;
+          color: #9c9c9c !important;
+          font-size: 100%;
+          text-align: center;
+        }
 
         .circle {
           position: relative;
           display: inline-block;
-          //width: 100%;
-        //  height: 0;
           width: 55px;
           height: 55px;
-          //margin: 5px 30px;
           padding: 20px 0;
           border-radius: 50%;
           border: 1px solid #9c9c9c;
-          //background: #38a9e4;
           color: #9c9c9c;
           font-family: 'Josefin Slab', serif;
           font-size:100% !important;
@@ -39,109 +52,46 @@ page-palette {
         }
 
 
-        #hometop {
-          height: 8vh;
-          //margin-bottom: 7vh;
+        #menubottom {
+          height: 8vh;position: fixed; width:100vw;z-index: 3;bottom:0px;vertical-align:top ;border-top:1px solid #d3d3d3 !important;
         }
 
-    #chosenTheme {
-      //display: inline-block;
-      width: 30px;
-      height: 30px;
-    }
+        #chosenTheme {
+          width: 30px;
+          height: 30px;
+        }
 
-    .tear {
-      display: inline-block;
-      transform: rotate(-45deg);
-      background-color: green;
-      width: 30px;
-      height: 30px;
-      border-top-left-radius: 50%;
-      border-bottom-left-radius: 50%;
-      border-bottom-right-radius: 50%;
-    }
+        #categorytab {
+          padding:15px;padding-top:13px;padding-bottom:3px;font-size:140%;background-color:#f7f4f4;height:100%;border-bottom:10px solid #8bb2c6;
+        }
+
+        #palletetab {
+          padding:12px;font-size:140%;background-color: #c1775d;color:white;height:100%;
+        }
+
+        #fonttab {
+          padding:12px;font-size:140%;background-color: #e8e5e5;height:100%;text-decoration: line-through;
+        }
+
+        .tear {
+          display: inline-block;
+          transform: rotate(-45deg);
+          background-color: green;
+          width: 30px;
+          height: 30px;
+          border-top-left-radius: 50%;
+          border-bottom-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+        }
 
 
 
-    .vertical-align-content > *
-{
-     display: flex!important;
-     align-content: center!important;
-     align-items: center!important;
+        .vertical-align-content > *{
+         display: flex!important;
+         align-content: center!important;
+         align-items: center!important;
+       }
+
+
+
 }
-
-
-
-}
-//
-// page-palette {
-//
-//     ion-grid {
-//       height: 100%;
-//     }
-//
-//     ion-row {
-//       height: 20%;
-//       text-align: center !important;
-//     }
-//
-//     ion-content {
-//       font-family: 'Josefin Slab', serif;
-//       color: #9c9c9c !important;
-//       font-size: 100%; //was 140%
-//       text-align: center;
-//     }
-//
-//
-//
-//         .circle {
-//           position: relative;
-//           display: inline-block;
-//           //width: 100%;
-//         //  height: 0;
-//           width: 55px;
-//           height: 55px;
-//           //margin: 5px 30px;
-//           padding: 20px 0;
-//           border-radius: 50%;
-//           border: 1px solid #9c9c9c;
-//           //background: #38a9e4;
-//           color: #9c9c9c;
-//           font-family: 'Josefin Slab', serif;
-//           font-size:100% !important;
-//           text-align: center;
-//         }
-//
-//
-//
-//
-//     #chosenTheme {
-//       //display: inline-block;
-//       width: 30px;
-//       height: 30px;
-//     }
-//
-//     .tear {
-//       display: inline-block;
-//       transform: rotate(-45deg);
-//       background-color: green;
-//       width: 50px;
-//       height: 50px;
-//       border-top-left-radius: 50%;
-//       border-bottom-left-radius: 50%;
-//       border-bottom-right-radius: 50%;
-//     }
-//
-//
-//
-//     .vertical-align-content > *
-// {
-//      display: flex!important;
-//      align-content: center!important;
-//      align-items: center!important;
-// }
-//
-//
-//
-// }
-// >>>>>>> ae28ee429d8b33d1a53fc6b6265df2434a56a54d

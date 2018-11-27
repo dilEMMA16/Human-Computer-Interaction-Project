@@ -46,8 +46,6 @@ export class SaveThemeProvider {
 
     return this.getAllSavedThemes().then(result => {
       if (result) {
-        //var index = result.indexOf(game);
-        //console.log("result of index for game" + index);
         result.splice(index, 1);
         return this.storage.set(STORAGE_KEY, result);
         }
