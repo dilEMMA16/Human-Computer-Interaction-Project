@@ -9,9 +9,13 @@ Enjila Mishra & Emma Schreifels
 ## To Read Main Code
 - Visit src/pages to view all the pages created
   - Each page has three components to it
+  
     *1. **HTML Page:** provides the page layout*
+    
     *2. **SCSS Page:** provides style and formatting to page elements*
+    
     *3. **TS Page:** provides functions necessary for page tasks*
+    
 - Visit src/providers to view save theme provider created
 
 *Note: the framework used was [Ionic](https://ionicframework.com/)*
