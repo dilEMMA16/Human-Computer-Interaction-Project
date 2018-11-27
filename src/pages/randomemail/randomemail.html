@@ -63,13 +63,13 @@ currentEmail = versionDoc.getElementById("selectedEmail").value;
 
     <!-- OPTIONS TO SAVE, START NEW, SEND EMAIL FOR THEME -->
     <button  (click)="triggerSaveTheme()" id=triggersavebutton>save your theme</button>
-    <div id=saveThemeCard>
+    <div id=saveThemeCard style="display:none !important;">
       <ion-item id=themeNameInput>
         <ion-input id=inputofname placeholder="name your theme..." type="text" [(ngModel)]="themeName" ></ion-input>
       </ion-item>
       <button ion-button full  id="saveButton" (click)="saveTheme()">save</button>
     </div>
-    <button id=newtheme (click)="startNewTheme()" >back to categories</button>
+    <button id=newTheme (click)="startNewTheme()" >back to categories</button>
     <button  (click)="sendEmail()" id=emailbutton>email the css code</button>
 
 

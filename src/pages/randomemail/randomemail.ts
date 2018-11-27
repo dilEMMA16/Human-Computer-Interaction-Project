@@ -67,7 +67,7 @@ export class RandomEmailPage {
     let themeNameInput: HTMLElement = document.getElementById("themeNameInput");
     saveButton.style.display = "block";
     themeNameInput.style.display = "block";
-    document.getElementById("newtheme").style.height = "6vh";
+    document.getElementById("newTheme").style.height = "6vh";
 
   }
 
