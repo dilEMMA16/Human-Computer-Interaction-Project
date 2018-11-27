@@ -3,122 +3,94 @@
 
 
 <script>
-var emailDoc = version.document || version.contentDocument;
-// ...and then
-currentEmail = versionDoc.getElementById("selectedEmail").value;
+    var emailDoc = version.document || version.contentDocument;
+    currentEmail = versionDoc.getElementById("selectedEmail").value;
 </script>
 
 <ion-content no-padding>
-  <div (click)="savedThemes()" style="background-color:#abbc89;color:white;z-index: 6;position:fixed;left:20px;top:0px;padding:10px;">saved themes
-  </div>
-  <ion-grid class="vertical-align-content" style="padding:0px;">
-    <!-- <ion-row style="position:relative;">
 
-      <ion-col col-3></ion-col>
-      <ion-col col-2>
-        <div class="circle" (click)="navigateToHomePage()" style="background-color:#9c9c9c; color:white;">theme</div>
-      </ion-col>
-      <ion-col col-2>
-        <div class="circle" (click)="navigateToPalletePage()" style="background-color:#9c9c9c; color:white;">colors</div>
-      </ion-col>
-      <ion-col col-2>
-        <div class="circle" style="background-color:#9c9c9c; color:white;">fonts</div>
-      </ion-col>
-      <ion-col col-3></ion-col>
-      <div  style="width:100%; height:9vh; text-align:center; padding-top: 20px; font-size:140%">your selections</div>
-    </ion-row> -->
-    <ion-row style="width:100%; text-align:center; padding-top:20px;height:15vh;margin:5px;font-style: italic;">
-      <ion-col col-12 style="padding:15px;padding-top:30px;">
-        <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">your selected theme</span>
-      </ion-col>
-    </ion-row>
-    <ion-row >
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 10px;margin-bottom:31px;">colors</ion-col>
-    </ion-row>
-    <ion-row style="    padding: 0 15px;">
-      <ion-col class="col col-3">
-        <div class="tear" [style.background-color]="color1" style="display:inline-block !important;"></div>
-      </ion-col>
-      <ion-col class="col col-3">
-        <div class="tear" [style.background-color]="color2" style="display:inline-block !important;"></div>
-      </ion-col>
-      <ion-col class="col col-3">
-        <div class="tear" [style.background-color]="color3" style="display:inline-block !important;"></div>
-      </ion-col>
-      <ion-col class="col col-3">
-        <div class="tear" [style.background-color]="color4" style="display:inline-block !important;"></div>
-      </ion-col>
-    </ion-row><br>
-    <ion-row style="font-size: 80%;    padding: 0 15px;">
-      <ion-col class="col col-3" >{{color1}}</ion-col>
-      <ion-col class="col col-3">{{color2}}</ion-col>
-      <ion-col class="col col-3">{{color3}}</ion-col>
-      <ion-col class="col col-3">{{color4}}</ion-col>
-    </ion-row>
-    <!-- <ion-row>
-      <ion-col class = "col col-6">
-          <div class="tear summary" [id]="color1" [style.background-color]="color1" style="display:inline-block !important;margin:10px;"></div>
-          <br>{{color1}}
-      </ion-col>
-      <ion-col class = "col col-6">
-          <div class="tear summary" [id]="color2" [style.background-color]="color2" style="display:inline-block !important;margin:10px;"></div>
-            <br>{{color2}}
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class = "col col-6">
-          <div class="tear summary" [id]="color3" [style.background-color]="color3" style="display:inline-block !important;margin:10px;"></div>
-            <br>{{color3}}
-      </ion-col>
-      <ion-col class = "col col-6">
-          <div class="tear summary" [id]="color4" [style.background-color]="color4" style="display:inline-block !important;margin:10px;"></div>
-            <br>{{color4}}
-      </ion-col>
-    </ion-row> -->
-    <br><br>
-    <ion-row style="margin:8px;">
-      <ion-col class = "col col-12" style="width:21%;border-bottom: 1px solid #cecece; padding-bottom: 15px;margin-bottom:10px;">fonts</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="col col-12"[style.font-family]=font1code style="text-align:center;font-size:1.75em;padding:0px !important;"><h1 style="margin-bottom: 0.6rem;">{{font1}}</h1></ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="col col-12" [style.font-family]=font2code  style="text-align:center;font-size:1em;padding:0px !important;"><h2>{{font2}}</h2></ion-col>
-    </ion-row>
-    <br>
+    <!-- BOOKMARK TO GO TO SAVED THEMES PAGE -->
+    <div (click)="savedThemes()" id=savedthemebookmark>saved themes
+    </div>
+    <ion-grid class="vertical-align-content" style="padding:0px;">
+
+        <!-- PAGE TITLE -->
+        <ion-row id=instructrow>
+            <ion-col col-12 style="padding:15px;padding-top:30px;">
+                <span id=formattedinstruct>your selected theme</span>
+            </ion-col>
+        </ion-row>
+
+        <!-- COLORS CHOSEN FOR THEME -->
+        <ion-row >
+            <ion-col class = "col col-12" id=colortitle>colors</ion-col>
+        </ion-row>
+        <ion-row style="padding: 0 15px;">
+            <ion-col class="col col-3">
+                <div class="tear" [style.background-color]="color1" style="display:inline-block !important;"></div>
+            </ion-col>
+            <ion-col class="col col-3">
+                <div class="tear" [style.background-color]="color2" style="display:inline-block !important;"></div>
+            </ion-col>
+            <ion-col class="col col-3">
+                <div class="tear" [style.background-color]="color3" style="display:inline-block !important;"></div>
+            </ion-col>
+            <ion-col class="col col-3">
+                <div class="tear" [style.background-color]="color4" style="display:inline-block !important;"></div>
+            </ion-col>
+        </ion-row><br>
+        <ion-row style="font-size: 80%;    padding: 0 15px;">
+            <ion-col class="col col-3" >{{color1}}</ion-col>
+            <ion-col class="col col-3">{{color2}}</ion-col>
+            <ion-col class="col col-3">{{color3}}</ion-col>
+            <ion-col class="col col-3">{{color4}}</ion-col>
+        </ion-row>
+        <br><br>
 
 
-        <button   (click)="triggerSaveTheme()" style= "width: 100%; font-size: 140%;height: 6vh; background-color: #abbc89; color: white;padding-left:29%;">save your theme</button>
-        <div id=saveThemeCard style="display:none !important;padding:20px;">
-          <ion-item id=themeNameInput style="margin-right:5px;">
-            <!-- <ion-label floating>Name your theme ...</ion-label> -->
-            <ion-input id=inputofname placeholder="name your theme..." type="text" [(ngModel)]="themeName" style="width:45%; color: #9c9c9c !important;"></ion-input>
-          </ion-item>
-          <button ion-button full  style= "width:25vw;background-color:#abbc89;color:white;" id="saveButton" (click)="saveTheme()">save</button>
+        <!-- FONTS CHOSEN FOR THEME -->
+        <ion-row style="margin:8px;">
+            <ion-col class = "col col-12" id=fonttitle>fonts</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="col col-12"[style.font-family]=font1code id=divforhead><h1 style="margin-bottom: 0.6rem;">{{font1}}</h1></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="col col-12" [style.font-family]=font2code id=divforbody><h2>{{font2}}</h2></ion-col>
+        </ion-row>
+        <br>
+
+
+        <!-- SAVE THEME / START NEW / SEND EMAIL OPTIONS -->
+        <button (click)="triggerSaveTheme()" id=triggersavebutton>save your theme</button>
+        <div id=saveThemeCard>
+            <ion-item id=themeNameInput>
+                <ion-input id=inputofname placeholder="name your theme..." type="text" [(ngModel)]="themeName"></ion-input>
+            </ion-item>
+            <button ion-button full  id="saveButton" (click)="saveTheme()">save</button>
         </div>
-        <button  (click)="startNewTheme()" style= "width: 100%; font-size: 140%;height: 6vh; background-color: #8bb2c6; color: white;padding-left:29%;">start new theme</button>
-        <button  (click)="sendEmail()" style= "font-size: 140%;width: 100%; height: 6vh; background-color: #c4bb6f; color: white; text-align:center; padding-left:26%;">email the css code</button>
+        <button  (click)="startNewTheme()" id=startnewbutton>start new theme</button>
+        <button  (click)="sendEmail()" id=sendemailbutton>email the css code</button>
 
 
-    <ion-row id="hometop" style="position:   !important; bottom:0 !important;width:100%; vertical-align:top ;border-top:1px solid #d3d3d3 !important;">
-      <!-- <ion-col col-3></ion-col> -->
+        <!-- BOTTOM MENU -->
+        <ion-row id="menubottom">
+            <ion-col col-4 (click)="navigateToHomePage()" id=categorytab>
+                     <img style="height:20px;width:20px;"id=chosenTheme [src]= "theme">
+            </ion-col>
+            <ion-col col-4 (click)="navigateToPalletePage()" id=palletetab>
+                <div class="tear3" [style.background-color]="color1" style="display:inline-block !important;"></div>
+                <div class="tear3" [style.background-color]="color2" style="display:inline-block !important;"></div>
+                <div class="tear3" [style.background-color]="color3" style="display:inline-block !important;"></div>
+                <div class="tear3" [style.background-color]="color4" style="display:inline-block !important;"></div>
+            </ion-col>
+            <ion-col (click)=navigateToFontPage() col-4 id="fonttab">
+                <span [style.font-family]=font1code>A</span><span [style.font-family]=font2code>a</span>
+            </ion-col>
+        </ion-row>
 
-      <ion-col col-4 (click)="navigateToHomePage()" style=" height:100%;padding:15px;padding-top:13px;padding-bottom:3px;font-size:140%;background-color: #f7f4f4;border-bottom:10px solid #8bb2c6;">
-        <img style="height:20px;width:20px;"id=chosenTheme [src]= "theme">
-      </ion-col>
-      <ion-col col-4 (click)="navigateToPalletePage()" style="height:100%;padding:10px;font-size:140%;background-color: #f7f4f4;border-bottom:10px solid #c1775d;">
-        <div class="tear3" [style.background-color]="color1" style="display:inline-block !important;"></div>
-        <div class="tear3" [style.background-color]="color2" style="display:inline-block !important;"></div>
-        <div class="tear3" [style.background-color]="color3" style="display:inline-block !important;"></div>
-        <div class="tear3" [style.background-color]="color4" style="display:inline-block !important;"></div>
-      </ion-col>
-      <ion-col (click)=navigateToFontPage() col-4 style="padding:9px;font-size:140%;background-color: #f7f4f4;height:100%;border-bottom:10px solid #c4bb6f;">
-        <span [style.font-family]=font1code>A</span><span [style.font-family]=font2code>a</span>
-      </ion-col>
-    </ion-row>
 
-
-  </ion-grid>
+    </ion-grid>
 
 
 </ion-content>

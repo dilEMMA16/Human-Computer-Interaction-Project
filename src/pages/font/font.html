@@ -2,54 +2,54 @@
 
 
 <ion-content no-padding>
-  <div (click)="savedThemes()" style="background-color:#abbc89;color:white;z-index: 6;position:fixed;left:20px;top:0px;padding:10px;">saved themes
-  </div>
-  <ion-grid class="vertical-align-content" style="padding:0px;">
+    <div (click)="savedThemes()" id=savedthemesbookmark>saved themes
+    </div>
+    <ion-grid class="vertical-align-content" style="padding:0px;">
 
         <ion-row style="width:100%; text-align:center; padding:5px;padding-top:20px;height:15vh;margin:5px;font-style: italic;">
-          <ion-col col-12 style="padding:15px;padding-top:30px;">
-            <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">choose a font combo</span>
-          </ion-col>
+            <ion-col col-12 style="padding:15px;padding-top:30px;">
+                <span style="font-family: 'La Belle Aurore', cursive;font-size:180%;">choose a font combo</span>
+            </ion-col>
         </ion-row>
-<br>
+        <br>
 
         <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(1)>
-          <ion-col col-2 class = "col" style="font-size:80%;padding-left:5px;">combo #1 </ion-col>
-          <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;  border-top: 1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-            <span style="font-size:1.75em;" [style.font-family]=font1codeheader >{{font1nameheader}}</span><br>
-            <span style="font-size:1em;" [style.font-family]=font1codebody >{{font1namebody}}</span>
-          </ion-col>
+            <ion-col col-2 class = "col" style="font-size:80%;padding-left:5px;">combo #1 </ion-col>
+            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;  border-top: 1px solid #cecece;padding-bottom:10px;line-height:1.8;">
+                <span style="font-size:1.75em;" [style.font-family]=font1codeheader >{{font1nameheader}}</span><br>
+                <span style="font-size:1em;" [style.font-family]=font1codebody >{{font1namebody}}</span>
+            </ion-col>
         </ion-row>
         <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(2)>
-          <ion-col col-2 class = "col" style="font-size:80%;">combo #2 </ion-col>
-          <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-            <span style="font-size:1.75em;" [style.font-family]=font2codeheader >{{font2nameheader}}</span><br>
-            <span style="font-size:1em;" [style.font-family]=font2codebody >{{font2namebody}}</span>
-          </ion-col>
+            <ion-col col-2 class = "col" style="font-size:80%;">combo #2 </ion-col>
+            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
+                <span style="font-size:1.75em;" [style.font-family]=font2codeheader >{{font2nameheader}}</span><br>
+                <span style="font-size:1em;" [style.font-family]=font2codebody >{{font2namebody}}</span>
+            </ion-col>
         </ion-row>
 
         <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(3)>
-          <ion-col col-2 class = "col" style="font-size:80%;">combo #3 </ion-col>
-          <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-            <span style="font-size:1.75em;" [style.font-family]=font3codeheader >{{font3nameheader}}</span><br>
-            <span style="font-size:1em;" [style.font-family]=font3codebody >{{font3namebody}}</span>
-          </ion-col>
+            <ion-col col-2 class = "col" style="font-size:80%;">combo #3 </ion-col>
+            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
+                <span style="font-size:1.75em;" [style.font-family]=font3codeheader >{{font3nameheader}}</span><br>
+                <span style="font-size:1em;" [style.font-family]=font3codebody >{{font3namebody}}</span>
+            </ion-col>
         </ion-row>
 
         <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(4)>
-          <ion-col col-2 class = "col" style="font-size:80%;">combo #4 </ion-col>
-          <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-            <span style="font-size:1.75em;" [style.font-family]=font4codeheader >{{font4nameheader}}</span><br>
-            <span style="font-size:1em;" [style.font-family]=font4codebody >{{font4namebody}}</span>
-          </ion-col>
+            <ion-col col-2 class = "col" style="font-size:80%;">combo #4 </ion-col>
+            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
+                <span style="font-size:1.75em;" [style.font-family]=font4codeheader >{{font4nameheader}}</span><br>
+                <span style="font-size:1em;" [style.font-family]=font4codebody >{{font4namebody}}</span>
+            </ion-col>
         </ion-row>
 
         <ion-row style="height:13vh;margin-bottom:5px;padding:20px;" (click)=navigateToEmailPage(5)>
-          <ion-col col-2 class = "col" style="font-size:80%;">combo #5 </ion-col>
-          <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
-            <span style="font-size:1.75em;" [style.font-family]=font5codeheader >{{font5nameheader}}</span><br>
-            <span style="font-size:1em;" [style.font-family]=font5codebody >{{font5namebody}}</span>
-          </ion-col>
+            <ion-col col-2 class = "col" style="font-size:80%;">combo #5 </ion-col>
+            <ion-col class = "col" col-10 style="border-bottom:1px solid #cecece;padding-bottom:10px;line-height:1.8;">
+                <span style="font-size:1.75em;" [style.font-family]=font5codeheader >{{font5nameheader}}</span><br>
+                <span style="font-size:1em;" [style.font-family]=font5codebody >{{font5namebody}}</span>
+            </ion-col>
         </ion-row>
 
 
@@ -57,21 +57,19 @@
 
 
 
-    <ion-row id="hometop" style="position: fixed; width:100%; bottom:0px;vertical-align:top ;border-top:1px solid #d3d3d3 !important;">
-      <!-- <ion-col col-3></ion-col> -->
-
-      <ion-col col-4 (click)="navigateToHomePage()" style=" padding:15px;padding-top:13px;padding-bottom:3px;font-size:140%;background-color:#f7f4f4;border-bottom:10px solid #8bb2c6;">
-        <img style="height:23px;width:23px;"id=chosenTheme [src]= "theme">
-      </ion-col>
-      <ion-col col-4 (click)="navigateToPalletePage()" style="padding:10px;padding-top:10px;font-size:140%;background-color:#f7f4f4;border-bottom:10px solid #c1775d;">
-        <div class="tear3" [style.background-color]="color1" style="display:inline-block !important;"></div>
-        <div class="tear3" [style.background-color]="color2" style="display:inline-block !important;"></div>
-        <div class="tear3" [style.background-color]="color3" style="display:inline-block !important;"></div>
-        <div class="tear3" [style.background-color]="color4" style="display:inline-block !important;"></div>
-      </ion-col>
-      <ion-col col-4 style="padding:12px;font-size:140%;height:100%;background-color:#c4bb6f;color:white;">
-        fonts
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        <ion-row id="menubottom">
+            <ion-col col-4 (click)="navigateToHomePage()" id=categorytab>
+                     <img style="height:23px;width:23px;"id=chosenTheme [src]= "theme">
+            </ion-col>
+            <ion-col col-4 (click)="navigateToPalletePage()" id=palletetab>
+                <div class="tear3" [style.background-color]="color1" style="display:inline-block !important;"></div>
+                <div class="tear3" [style.background-color]="color2" style="display:inline-block !important;"></div>
+                <div class="tear3" [style.background-color]="color3" style="display:inline-block !important;"></div>
+                <div class="tear3" [style.background-color]="color4" style="display:inline-block !important;"></div>
+            </ion-col>
+            <ion-col col-4 id=fonttab>
+                fonts
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

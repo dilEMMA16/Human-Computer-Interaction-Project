@@ -6,10 +6,12 @@ import { SavedPage} from "../saved/saved";
 import { EmailPage} from "../email/email";
 import { FontPage} from "../font/font";
 import { EmailComposer } from '@ionic-native/email-composer';
+
 @Component({
   selector: 'page-customfont',
   templateUrl: 'customfont.html'
 })
+
 export class CustomFontPage {
   color1: any;
   color2: any;
@@ -31,9 +33,8 @@ export class CustomFontPage {
     this.theme = ""+navParams.get('data')+"";
     this.headerfonts = navParams.get('headerfonts');
     this.bodyfonts = navParams.get('bodyfonts');
-	this.headerfontisselected = false;
-	this.bodyfontisselected = false;
-
+  	this.headerfontisselected = false;
+  	this.bodyfontisselected = false;
   }
 
   navigateToHomePage() {
@@ -43,7 +44,6 @@ export class CustomFontPage {
 
   navigateToPalletePage() {
     this.navCtrl.pop();
-
   }
 
   savedThemes():void{
@@ -58,11 +58,11 @@ export class CustomFontPage {
           element2.classList.remove("opened");
         }
     this.navCtrl.push(SavedPage, {
-      dummy:"dummy",
-      dummy2:"dummy2"
+      test:"test"
     });
 
   }
+
 
 showheaderDiv():void{
 	let element: HTMLElement = document.getElementById("headerDiv");
@@ -90,6 +90,8 @@ showheaderDiv():void{
 
 }
 
+
+
 headerfontClicked(font):void{
 	let element: HTMLElement = document.getElementById("headerDiv");
 	element.style.display = "none";
@@ -108,6 +110,9 @@ headerfontClicked(font):void{
 	   element2.style.display = "none";
   }
 }
+
+
+
 
 bodyfontClicked(font):void{
 	let element: HTMLElement = document.getElementById("bodyDiv");
@@ -152,6 +157,8 @@ showbodyDiv():void{
 
 }
 
+
+
 confirm():void{
 	if (this.headerfontisselected && this.bodyfontisselected){
     let element: HTMLElement = document.getElementById("headerDiv");
@@ -183,4 +190,9 @@ confirm():void{
 	element2.innerHTML= "Please make sure you have both the header and body fonts selected!";
 	}
 }
+
+
+
+
+
 }

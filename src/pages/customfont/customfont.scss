@@ -1,31 +1,94 @@
 
 page-customfont {
-  * {
-    box-sizing: border-box;
-    position: relative;
-  }
+      * {
+        box-sizing: border-box;
+        position: relative;
+      }
 
-  .circle {
-    position: relative;
-    display: inline-block;
-    //width: 100%;
-  //  height: 0;
-    width: 55px; //were 75 with 26 padding font-size 140%
-    height: 55px;
-    //margin: 2vw 5vw;
-    padding: 20px 0;
-    border-radius: 50%;
-    border: 1px solid #9c9c9c;
-    //background: #38a9e4;
-    color: #9c9c9c;
-    font-family: 'Josefin Slab', serif;
-    font-size:100%;
-    text-align: center;
-  }
-  #hometop {
-    height: 8vh;
-    // margin-bottom: 7vh;
-  }
+      #formattedinstructions {
+        font-family: 'La Belle Aurore', cursive;font-size:180%;
+      }
+
+      #savedthemesbookmark {
+        background-color:#abbc89;color:white;z-index: 6;position:fixed;left:20px;top:0px;padding:10px;
+      }
+
+      #categorytab {
+         padding:15px;padding-top:13px;padding-bottom:3px;font-size:140%;background-color:#f7f4f4;border-bottom:10px solid #8bb2c6;
+      }
+
+      #palettetab {
+        padding:10px;padding-top:10px;font-size:140%;background-color:#f7f4f4;border-bottom:10px solid #c1775d;
+      }
+
+      #fonttab {
+        padding:12px;font-size:140%;height:100%;background-color:#c4bb6f;color:white;
+      }
+
+      #instructionrow {
+        width:100%; text-align:center; padding:5px;padding-top:20px;height:15vh;margin:5px;font-style: italic;
+      }
+
+      .fontsToChooseFrom {
+        text-align: center; padding: 5px; margin-right: auto; margin-left:auto
+      }
+
+      .fontsToChooseFromRow {
+        text-align: center; border-bottom:1px solid #cecece;padding-bottom:10px; padding-top:10px; font-size:1.2em; height: auto;
+      }
+
+      .tearblock {
+        display:inline-block !important;
+      }
+
+      .circle {
+        position: relative;
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        padding: 20px 0;
+        border-radius: 50%;
+        border: 1px solid #9c9c9c;
+        color: #9c9c9c;
+        font-family: 'Josefin Slab', serif;
+        font-size:100%;
+        text-align: center;
+      }
+
+      #menubottom {
+        height: 8vh;
+        position: sticky; width:100%; bottom:0px;vertical-align:top ;border-top:1px solid #d3d3d3 !important;
+      }
+
+      #headerbutton {
+        font-size: 140%;width: 100%; height: auto; background-color: #55707b; padding-top: 10vh; padding-bottom: 11vh; color: white; text-align:center; padding-left:6%;
+      }
+      #headerDiv {
+         display: none; padding-bottom:10px; height: auto;
+      }
+
+      #confirmError {
+        color: #c1775d; font-weight: bold;border-left:solid 10px #c1775d;background-color: #E5C7BD;padding: 15px; text-align:center;display: none;
+      }
+      #showclickedheaderDiv {
+        line-height: 1.6;text-align: center; background-color: rgb(110, 149, 137);color: white;padding-bottom:25px; padding-top:25px; font-size:1.8em; height: auto; display: none; height: auto;
+      }
+
+      #bodybutton {
+        width: 100%; font-size: 140%;height: auto; background-color: #8bb2c6; padding-top: 10vh; padding-bottom: 11vh; color: white;padding-left:6%;
+      }
+      #bodyDiv {
+        display: none; padding-bottom:10px; height: auto;
+      }
+
+      #showclickedbodyDiv {
+        line-height: 1.6;text-align: center; background-color: #aac6d5;color:white;padding-bottom:25px; padding-top:25px; font-size:1.8em; height: auto; display: none;  height: auto;
+      }
+
+      #confirmButton {
+        position:sticky; margin-top:0vh;bottom: 8vh;width: 100%; font-size: 140%;height: auto;  padding-top: 5vh; padding-bottom: 5vh;  background-color: #abbc89; color: white;padding-left:6%;
+      }
+
       ion-content {
         font-family: 'Montserrat', sans-serif;
         color: #9c9c9c !important;
@@ -34,10 +97,6 @@ page-customfont {
       h1 {
         font-size: 160%;
         margin-top: 0px;
-      }
-
-      ion-grid {
-        //height: 100%;
       }
 
       .active {
@@ -49,37 +108,36 @@ page-customfont {
       }
 
       #chosenTheme {
-        //display: inline-block;
         width: 30px;
         height: 30px;
       }
+
       ion-col {
         padding: 3px;
       }
 
       .vertical-align-content > *
-  {
+      {
        display: flex!important;
        align-content: center!important;
        align-items: center!important;
-  }
+     }
 
-  .align-bottom {
-    align-items: flex-end!important;
-    align-content: flex-end!important;
-  }
+      .align-bottom {
+        align-items: flex-end!important;
+        align-content: flex-end!important;
+      }
 
-  .tear3 {
-    display: inline;
-    transform: rotate(135deg);
-    background-color: green;
-    width: 14px;
-    //margin: 30px;
-    height: 14px;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    color: white;
-    text-align: center;
-  }
-}
+      .tear3 {
+        display: inline;
+        transform: rotate(135deg);
+        background-color: green;
+        width: 14px;
+        height: 14px;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        color: white;
+        text-align: center;
+        }
+    }
