@@ -8,6 +8,10 @@ Enjila Mishra & Emma Schreifels
 
 ## To Read Main Code
 - visit src/pages to view all the pages created
+  - Each page has three components to it
+    1. HTML Page: provides the page layout
+    2. SCSS Page: provides style and formatting to page elements
+    3. TS Page: provides functions necessary for page tasks
 - visit src/providers to view save theme provider created
 
 
