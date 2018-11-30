@@ -8,6 +8,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
 import { HomePage} from "../home/home";
 import { FontPage} from "../font/font";
 import { SaveThemeProvider } from './../../providers/save-theme/save-theme';
+import { AlertController } from 'ionic-angular';
 @Component({
   selector: 'page-saved',
   templateUrl: 'saved.html'
@@ -17,7 +18,7 @@ export class SavedPage {
 savedThemes: any;
 
 
-  constructor(public navCtrl: NavController, private cd: ChangeDetectorRef,private emailComposer: EmailComposer,public navParams: NavParams,public saveThemeProvider: SaveThemeProvider) {
+  constructor(public navCtrl: NavController, private cd: ChangeDetectorRef,private emailComposer: EmailComposer,public navParams: NavParams,public saveThemeProvider: SaveThemeProvider,private alertCtrl: AlertController) {
     this.saveThemeProvider.getAllSavedThemes().then(result => {
       console.log("local storage for themes on saved page" + result);
       this.savedThemes = result;
@@ -66,6 +67,34 @@ savedThemes: any;
       this.savedThemes = result;
     });
   }
+
+  //taken from the ionic framework docs https://ionicframework.com/docs/api/components/alert/AlertController/
+  presentConfirm(index) {
+  let alert = this.alertCtrl.create({
+    title: 'Confirm delete',
+    cssClass: 'grayText',
+    message: 'Are you sure you want to delete this theme?',
+    buttons: [
+      {
+        text: 'Yes, Delete it',
+        cssClass: 'redText',
+        handler: () => {
+          this.deleteTheme(index);
+        }
+      },
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+
+      }
+    ]
+
+  });
+  alert.present();
+}
 
 
 }

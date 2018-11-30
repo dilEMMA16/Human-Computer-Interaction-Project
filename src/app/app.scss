@@ -15,6 +15,30 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+.redText {
+
+  button {
+      color: red !important; // button text color
+      margin: 35px !important;
+  }
+}
+
+.grayText {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center !important;
+  h2 {
+      color: #8c8c8c;
+      text-align: center;
+      font-family: 'La Belle Aurore', cursive;
+      font-size:180% !important;
+  }
+  button {
+      margin: 5px auto !important;
+      color:#9c9c9c !important;
+  }
+}
+
+
 // Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Alegreya|Archivo+Black|Arvo|Averia+Libre|Baloo+Tammudu|Barrio|Bitter|Bungee+Inline|Bungee+Outline|Cabin+Sketch|Catamaran:100|Cookie|Domine|EB+Garamond|Electrolize|Fredericka+the+Great|Frijole|Fugaz+One|Hanalei+Fill|IM+Fell+English+SC|Inconsolata|Josefin+Sans|Josefin+Slab|Karla|Kosugi+Maru|Kreon|Lato|Libre+Barcode+39+Text|Lily+Script+One|Lobster|Londrina+Outline|Lustria|Megrim|Merriweather|Molengo|Monofett|Monoton|Montserrat|Muli|Nanum+Gothic|Nixie+One|Oleo+Script|Open+Sans|Oswald|Overpass|Ovo|PT+Sans|Pacifico|Passion+One|Playfair+Display|Poiret+One|Raleway|Righteous|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Ruslan+Display|Rye|Sacramento|Sail|Shrikhand|Source+Sans+Pro|Space+Mono|Special+Elite|Ubuntu+Mono|VT323|Vast+Shadow|Walter+Turncoat|Zilla+Slab+Highlight');
 
