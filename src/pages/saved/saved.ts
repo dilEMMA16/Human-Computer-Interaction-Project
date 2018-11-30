@@ -80,6 +80,11 @@ savedThemes: any;
         cssClass: 'redText',
         handler: () => {
           this.deleteTheme(index);
+          this.navCtrl.pop();
+          this.navCtrl.push(SavedPage, {
+            dummy:"dummy",
+            dummy2:"dummy2"
+          });
         }
       },
       {
